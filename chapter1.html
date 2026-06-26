@@ -119,6 +119,19 @@
       white-space: pre-wrap;
     }
 
+    .card-imgs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .card-imgs img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #fafafa;
+    }
+
     .show-btn {
       width: 100%;
       padding: 14px;
@@ -235,11 +248,13 @@
     <div class="card-question">
       <div class="label">Question</div>
       <p id="q-text"></p>
+      <div class="card-imgs" id="q-imgs"></div>
     </div>
     <button class="show-btn" id="show-btn" onclick="showAnswer()">👁 Show Answer</button>
     <div class="card-answer" id="answer-box">
       <div class="label">Answer</div>
       <p id="a-text"></p>
+      <div class="card-imgs" id="a-imgs"></div>
     </div>
   </div>
 
@@ -258,6 +273,30 @@
 
 <script>
 const DATA = [{"section":"Exercise 1.1","questions":[{"q":"Can you think of other examples where mathematics helps us in our everyday lives?","a":"Mathematics helps us in many everyday situations:\n1. Budgeting and Personal Finance — managing money, tracking expenses, planning savings.\n2. Cooking and Baking — measuring ingredients, adjusting recipe quantities.\n3. Shopping — calculating discounts, comparing prices, finding total cost.\n4. Home Improvement — measuring spaces, calculating areas, estimating materials.\n5. Travel Planning — calculating distances, estimating travel times.\n6. Health and Fitness — tracking calories, calculating BMI, monitoring exercise.\n7. Time Management — scheduling tasks, setting deadlines.\n8. Gardening — spacing plants, calculating garden areas."},{"q":"How has mathematics helped propel humanity forward? (Think of: scientific experiments, economy, building bridges, making TVs, mobile phones, computers, bicycles, trains, cars, planes, calendars, clocks, etc.)","a":"Mathematics has been important in moving humanity forward in many ways:\n1. Scientific Experiments — planning and analysing experiments, understanding natural laws.\n2. Economy and Democracy — modelling financial systems, analysing election results.\n3. Engineering and Architecture — designing bridges, buildings, ensuring they are safe.\n4. Technology and Electronics — making TVs, mobile phones, computers using algorithms.\n5. Transportation — designing vehicles, calculating speed and fuel efficiency.\n6. Timekeeping — developing accurate calendars and clocks.\n7. Medicine — medical imaging (MRI scans), calculating medication dosages, modelling disease spread.\n8. Astronomy and Space Exploration — calculating paths of planets, planning space missions."}]},{"section":"Exercise 1.2","questions":[{"q":"Can you recognise the pattern in each of the sequences below?\n(a) 1, 1, 1, 1, 1, 1, 1, …\n(b) 1, 2, 3, 4, 5, 6, 7, …\n(c) 1, 3, 5, 7, 9, 11, 13, …\n(d) 2, 4, 6, 8, 10, 12, 14, …\n(e) 1, 3, 6, 10, 15, 21, 28, …\n(f) 1, 4, 9, 16, 25, 36, 49, …\n(g) 1, 8, 27, 64, 125, 216, …\n(h) 1, 2, 3, 5, 8, 13, 21, …\n(i) 1, 2, 4, 8, 16, 32, 64, …\n(j) 1, 3, 9, 27, 81, 243, 729, …","a":"(a) The number 1 is repeated indefinitely.\n(b) Counting numbers starting from 1. Each number increases by 1.\n(c) Odd numbers. Start from 1 and keep adding 2.\n(d) Even numbers. Start from 2 and keep adding 2.\n(e) Triangular numbers. Each term is the sum of natural numbers up to that point.\n(f) Square numbers. Each term is the square of its position (1², 2², 3², ...).\n(g) Cube numbers. Each term is the cube of its position (1³, 2³, 3³, ...).\n(h) Virahānka (Fibonacci) numbers. Each number is the sum of the two preceding numbers.\n(i) Powers of 2. Each term is 2 raised to the power of its position (2⁰, 2¹, 2², ...).\n(j) Powers of 3. Each term is 3 raised to the power of its position (3⁰, 3¹, 3², ...)."},{"q":"Rewrite each sequence from Table 1 along with the next three numbers. After each sequence, write in your own words what the rule is for forming the numbers.","a":"(a) 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, … → Rule: Repeat 1 forever.\n(b) 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, … → Rule: Add 1 each time. Next three: 8, 9, 10.\n(c) 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, … → Rule: Odd numbers, add 2 each time. Next: 15, 17, 19.\n(d) 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, … → Rule: Even numbers, add 2 each time. Next: 16, 18, 20.\n(e) 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, … → Rule: Triangular numbers. Next: 36, 45, 55.\n(f) 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, … → Rule: Square numbers. Next: 64, 81, 100.\n(g) 1, 8, 27, 64, 125, 216, 343, 512, 729, … → Rule: Cube numbers. Next: 343, 512, 729.\n(h) 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, … → Rule: Each number = sum of previous two. Next: 34, 55, 89.\n(i) 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, … → Rule: Multiply by 2 each time. Next: 128, 256, 512.\n(j) 1, 3, 9, 27, 81, 243, 729, 2187, 6561, 19683, … → Rule: Multiply by 3 each time. Next: 2187, 6561, 19683."}]},{"section":"Exercise 1.3","questions":[{"q":"Why are 1, 3, 6, 10, 15, … called triangular numbers? Why are 1, 4, 9, 16, 25, … called square numbers? Why are 1, 8, 27, 64, 125, … called cubes?","a":"Triangular numbers (1, 3, 6, 10, 15, …): These numbers can be arranged in the shape of an equilateral triangle. E.g., 3 dots form a triangle with 2 at the base and 1 at the top.\n\nSquare numbers (1, 4, 9, 16, 25, …): They represent the area of a square. E.g., 4 = 2×2 (a square with side 2). Each is a number multiplied by itself.\n\nCubes (1, 8, 27, 64, 125, …): They represent the volume of a cube. E.g., 8 = 2×2×2 (a cube with each side = 2)."},{"q":"36 is both a triangular number and a square number! Show that the same number can be represented differently depending on context. Try representing some other numbers pictorially in different ways.","a":"36 is the 8th triangular number (1+2+3+4+5+6+7+8 = 36) and also a perfect square (6×6 = 36).\n\nOther numbers that are both triangular AND square: 1, 1225, and 41616.\n\n1225 = 49th triangular number (can be arranged in a triangle with 49 rows)\n1225 = 35² = 35×35 (can also be arranged in a 35×35 square)\n\nThis shows how the same number can have different geometric meanings depending on context."},{"q":"What would you call the sequence 1, 7, 19, 37, 61, …? What is the next number in the sequence?","a":"These are called Hexagonal Numbers!\n\nThe pattern:\n1st = 1\n2nd = 1 + 6 = 7 (add 6×1)\n3rd = 7 + 12 = 19 (add 6×2)\n4th = 19 + 18 = 37 (add 6×3)\n5th = 37 + 24 = 61 (add 6×4)\n\nNext number = 61 + 30 = 91 (add 6×5)\n\nThe pattern: each time, add the next multiple of 6."},{"q":"Can you think of pictorial ways to visualise the sequence of Powers of 2? Powers of 3?","a":"Powers of 2 (1, 2, 4, 8, 16, …):\nImagine a line segment. Split it into 2 equal parts → 2. Split each part again → 4. Keep splitting → 8, 16, …\nAlternatively, think of it as squares doubling in size.\n\nPowers of 3 (1, 3, 9, 27, …):\nStart with 1 square. Replace each square with a 3×1 strip → 3 squares. Replace each of those with 3 more → 9 squares. Each step multiplies by 3."}]},{"section":"Exercise 1.4","questions":[{"q":"Can you find a pictorial explanation for why adding counting numbers up and down (1; 1+2+1; 1+2+3+2+1; …) gives square numbers?","a":"1 = 1² ✓\n1+2+1 = 4 = 2² ✓\n1+2+3+2+1 = 9 = 3² ✓\n1+2+3+4+3+2+1 = 16 = 4² ✓\n1+2+3+4+5+4+3+2+1 = 25 = 5² ✓\n1+2+3+4+5+6+5+4+3+2+1 = 36 = 6² ✓\n\nPictorial idea: Imagine building a staircase up and back down — it forms a perfect square grid. The number of dots = n² where n is the highest number in the sequence."},{"q":"What will be the value of 1 + 2 + 3 + ... + 99 + 100 + 99 + ... + 3 + 2 + 1?","a":"Following the pattern: 1+2+3+…+n+…+3+2+1 = n²\n\nHere n = 100, so the answer is 100² = 10,000.\n\nVerification:\nSum from 1 to 100 = 100×101/2 = 5050\nSum from 1 to 99 = 99×100/2 = 4950\nTotal = 5050 + 4950 = 10,000 ✓"},{"q":"Which sequence do you get when you add the All 1's sequence up? What sequence do you get when you add it up and down?","a":"Adding 1's upward:\n1 = 1\n1+1 = 2\n1+1+1 = 3\n1+1+1+1 = 4\n→ You get the Counting Numbers: 1, 2, 3, 4, 5, …\n\nAdding 1's up and down:\n1 = 1\n1+1+1 = 3 (or 1+1+1)\n→ You also get Odd numbers or the all-1s sequence sums both ways give the same total."},{"q":"Which sequence do you get when you start to add the counting numbers up?","a":"Adding counting numbers:\n1 = 1\n1+2 = 3\n1+2+3 = 6\n1+2+3+4 = 10\n1+2+3+4+5 = 15\n\n→ You get Triangular Numbers: 1, 3, 6, 10, 15, 21, …"},{"q":"What happens when you add up pairs of consecutive triangular numbers? (1+3, 3+6, 6+10, 10+15, …) Which sequence do you get?","a":"Triangular numbers: 1, 3, 6, 10, 15, 21, …\n\n1 + 3 = 4 = 2²\n3 + 6 = 9 = 3²\n6 + 10 = 16 = 4²\n10 + 15 = 25 = 5²\n\n→ You get Square Numbers: 4, 9, 16, 25, 36, …\n\nThis happens because the sum of two consecutive triangular numbers always forms a perfect square!"},{"q":"What happens when you start to add up powers of 2 starting with 1? (1; 1+2; 1+2+4; 1+2+4+8; …) Then add 1 to each — what numbers do you get?","a":"Adding powers of 2:\n1 = 1\n1+2 = 3\n1+2+4 = 7\n1+2+4+8 = 15\n1+2+4+8+16 = 31\n\nNow add 1 to each:\n1+1 = 2\n3+1 = 4\n7+1 = 8\n15+1 = 16\n31+1 = 32\n\n→ You get Powers of 2 again: 2, 4, 8, 16, 32, …\n\nWhy? Because 1+2+4+…+2ⁿ⁻¹ = 2ⁿ − 1, so adding 1 gives 2ⁿ."},{"q":"What happens when you multiply triangular numbers by 6 and add 1? (6×1+1, 6×3+1, 6×6+1, …) Which sequence do you get?","a":"Triangular numbers: 1, 3, 6, 10, 15, 21, …\n\n6×1 + 1 = 7\n6×3 + 1 = 19\n6×6 + 1 = 37\n6×10 + 1 = 61\n6×15 + 1 = 91\n\n→ You get Hexagonal Numbers: 7, 19, 37, 61, 91, …\n\nEach term increases by 12, then 18, then 24, then 30 — increasing by 6 each time."},{"q":"What happens when you start to add up hexagonal numbers? (1; 1+7; 1+7+19; 1+7+19+37; …) Which sequence do you get?","a":"Hexagonal numbers: 1, 7, 19, 37, 61, …\n\n1 = 1 = 1³\n1+7 = 8 = 2³\n1+7+19 = 27 = 3³\n1+7+19+37 = 64 = 4³\n1+7+19+37+61 = 125 = 5³\n\n→ You get Cube Numbers: 1, 8, 27, 64, 125, …\n\nThe sum of the first n hexagonal numbers = n³!"},{"q":"Find your own patterns or relations in and among the sequences in Table 1.","a":"Here are two simple patterns you can discover:\n\n1. Multiples of 3: 3, 6, 9, 12, 15, 18, … — each number is 3 more than the previous.\n\n2. Starting at 10 and increasing by 5: 10, 15, 20, 25, … — each term adds 5.\n\nYou can also notice:\n- Every even-positioned triangular number is also even.\n- Square numbers are always odd or divisible by 4.\n- Powers of 2 are always even (except the first term, 1 = 2⁰)."}]},{"section":"Exercise 1.5","questions":[{"q":"Can you recognise the pattern in each of the shape sequences below?\n(a) Regular Polygons: triangle → quadrilateral → pentagon → hexagon → …\n(b) Complete Graphs K2, K3, K4, K5, K6 (lines connecting every pair of points)\n(c) Stacked Squares\n(d) Stacked Triangles\n(e) Koch Snowflake","a":"(a) Regular Polygons: The number of sides increases by 1 each step (3, 4, 5, 6, …). This gives the counting numbers starting from 3.\n\n(b) Complete Graphs: Lines = 1, 3, 6, 10, 15, … → Triangular number sequence! (Each new point connects to all previous points.)\n\n(c) Stacked Squares: Small squares = 1, 4, 9, 16, 25, … → Square numbers (n²).\n\n(d) Stacked Triangles: Small triangles = 1, 4, 9, 16, 25, … → Also square numbers!\n\n(e) Koch Snowflake: Number of sides = 3, 12, 48, 192, … → 3 × Powers of 4 (each side becomes 4 sides)."},{"q":"Try to redraw each sequence in your notebook. Can you draw the next shape in each sequence? Describe the rule or pattern for each.","a":"(a) Regular Polygons: Next shape after hexagon (6 sides) is a heptagon (7 sides). Rule: add one side each time.\n\n(b) Complete Graphs: Next after K6 is K7 (7 points, 21 lines). Rule: each new point adds lines to all existing points.\n\n(c) Stacked Squares: Next is 6×6 = 36 small squares. Rule: n² squares in the nth shape.\n\n(d) Stacked Triangles: Next has 36 small triangles. Rule: add a new row of odd-numbered triangles at the bottom.\n\n(e) Koch Snowflake: Each line segment is replaced by 4 smaller segments. Number of sides = 3 × 4ⁿ⁻¹."}]},{"section":"Exercise 1.6","questions":[{"q":"Count the number of sides in each shape in the sequence of Regular Polygons. Which number sequence do you get? What about the number of corners? Do you get the same sequence?","a":"Sides: 3, 4, 5, 6, 7, … → Counting numbers starting from 3.\n\nCorners: 3, 4, 5, 6, 7, … → Same sequence!\n\nWhy? In any polygon, the number of sides = the number of corners (vertices). Every side connects two corners, and every corner connects two sides — so they are always equal."},{"q":"Count the number of lines in each shape in the sequence of Complete Graphs (K2, K3, K4, K5, K6). Which number sequence do you get?","a":"K2: 1 line\nK3: 3 lines\nK4: 6 lines\nK5: 10 lines\nK6: 15 lines\n\n→ Sequence: 1, 3, 6, 10, 15, … = Triangular Numbers!\n\nWhy? In Kₙ, every point connects to every other point. The number of lines = n×(n-1)/2, which is always a triangular number."},{"q":"How many little squares are there in each shape of the sequence of Stacked Squares? Which number sequence does this give?","a":"Shape 1: 1 square\nShape 2: 4 squares\nShape 3: 9 squares\nShape 4: 16 squares\nShape 5: 25 squares\n\n→ Sequence: 1, 4, 9, 16, 25, … = Square Numbers (n²)!\n\nWhy? The nth shape forms an n×n grid of small squares."},{"q":"How many little triangles are there in each shape of the sequence of Stacked Triangles? Which number sequence does this give?","a":"Shape 1: 1 triangle\nShape 2: 4 triangles\nShape 3: 9 triangles\nShape 4: 16 triangles\n\n→ Sequence: 1, 4, 9, 16, 25, … = Square Numbers (n²)!\n\nHint: In each shape, count the triangles row by row — each row adds an odd number of triangles (1, 3, 5, 7, …). The sum of first n odd numbers = n²."},{"q":"In the Koch Snowflake, each line segment '—' is replaced by a 'speed bump' shape. How many total line segments are there in each shape? What is the number sequence?","a":"Shape 1: 3 segments\nShape 2: 12 segments (each of 3 becomes 4)\nShape 3: 48 segments\nShape 4: 192 segments\n\n→ Sequence: 3, 12, 48, 192, … = 3 × Powers of 4\n\nWhy? Each step replaces every line segment with 4 new ones. So:\n3 → 3×4 = 12 → 12×4 = 48 → 48×4 = 192"}]}];
+
+// sectionIdx-qIdx → images to show
+// Sections: 0=Ex1.1, 1=Ex1.2, 2=Ex1.3, 3=Ex1.4, 4=Ex1.5, 5=Ex1.6
+const IMAGE_MAP = {
+  "2-0": { qimg: "pg7_img1.png",   aimg: ["pg10_img1.png","pg10_img2.png"] },
+  "2-1": {                          aimg: ["pg10_img1.png"] },
+  "3-0": {                          aimg: ["pg13_img1.png"] },
+  "4-0": { qimg: "pg21_img1.png",  aimg: ["pg22_img1.png","pg26_img2.png"] },
+  "4-1": {                          aimg: ["pg24_img1.png"] },
+  "5-1": {                          aimg: ["pg22_img1.png"] },
+  "5-3": {                          aimg: ["pg25_img1.png"] },
+};
+
+function setImgs(containerId, files) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = '';
+  if (!files || !files.length) return;
+  files.forEach(f => {
+    const img = document.createElement('img');
+    img.src = 'images/ch1/' + f;
+    img.alt = '';
+    el.appendChild(img);
+  });
+}
 
 let sectionIdx = 0;
 let qIdx = 0;
@@ -301,6 +340,10 @@ function render() {
     document.getElementById('answer-box').classList.remove('visible');
     document.getElementById('show-btn').style.display = 'block';
 
+    const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+    setImgs('q-imgs', imgs.qimg ? [imgs.qimg] : []);
+    setImgs('a-imgs', []);
+
     const fill = ((qIdx) / total) * 100;
     document.getElementById('progress-fill').style.width = fill + '%';
   }
@@ -312,6 +355,8 @@ function render() {
 function showAnswer() {
   document.getElementById('answer-box').classList.add('visible');
   document.getElementById('show-btn').style.display = 'none';
+  const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+  setImgs('a-imgs', imgs.aimg || []);
 }
 
 function nextQ() {
