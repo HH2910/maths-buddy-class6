@@ -1,0 +1,253 @@
+[
+  {
+    "section": "2.4 Ray",
+    "questions": [
+      {
+        "q": "Can you help Rihan and Sheetal find their answers?\n(Rihan marked one point on paper and asked: how many lines can pass through it? Sheetal marked two points and asked: how many lines can pass through both?)",
+        "a": "Rihan's point: Infinitely many lines can be drawn passing through a single point. You can rotate a line around that point in endless directions.\n\nSheetal's two points: Only one line can be drawn that passes through both points. Once two points are fixed, the line joining them is unique — there's no other straight path between the same two points."
+      },
+      {
+        "q": "Name the line segments in the figure (points L, M, P, Q, R joined in a zigzag). Which of the five marked points are on exactly one of the line segments? Which are on two of the line segments?",
+        "a": "Line segments: LM, MP, PQ and QR.\n\nPoints L and R lie on only one line segment each (L is only on LM, R is only on QR).\nPoints M, P and Q each lie on two line segments — M is on both LM and MP, P is on both MP and PQ, and Q is on both PQ and QR."
+      },
+      {
+        "q": "Name the rays shown in the figure (a ray from T through A, and a ray from T through N and B). Is T the starting point of each of these rays?",
+        "a": "The rays are ray TA and ray TB (ray TB can also be called ray TN, since N lies on the same ray between T and B).\n\nYes — T is the starting point of both rays. A ray always starts at one fixed point and extends endlessly in one direction, and here that fixed point is T for both."
+      },
+      {
+        "q": "Draw a rough figure and label it to illustrate each of the following:\n(a) OP and OQ meet at O.\n(b) XY and PQ intersect at point M.\n(c) Line l contains points E and F but not point D.\n(d) Point P lies on AB.",
+        "a": "(a) Two rays OP and OQ start from the same point O, going in different directions — they meet only at O.\n\n(b) Two lines XY and PQ cross each other, and the point where they cross is labelled M.\n\n(c) A line l is drawn passing through points E and F, with point D placed somewhere off the line (not on it).\n\n(d) A line segment AB is drawn, and point P is marked somewhere on the segment, between A and B."
+      },
+      {
+        "q": "In the figure, name:\n(a) Five points\n(b) A line\n(c) Four rays\n(d) Five line segments",
+        "a": "(a) Points: B, C, D, E and O.\n\n(b) Line: DB (the points D, O, B lie on one straight line).\n\n(c) Rays: OB, OC, OD, OE — each starting at O and going outward in a different direction.\n\n(d) Line segments: DE, EO, OB, DC, DO."
+      },
+      {
+        "q": "Here is a ray OB. It starts at O and passes through point A, and also through point B.\n(a) Can you also name it as ray OA? Why?\n(b) Can we write OA as AO? Why or why not?",
+        "a": "(a) Yes — ray OB can also be named ray OA, because a ray's name only depends on its starting point and its direction. Since A lies on the same ray between O and B, calling it OA still describes the exact same ray.\n\n(b) No — ray OA cannot be written as ray AO. The first letter of a ray's name is always its starting point. Ray OA starts at O and travels toward A, while 'ray AO' would mean a ray starting at A and travelling toward O — a completely different (opposite-direction) ray."
+      }
+    ]
+  },
+  {
+    "section": "2.5 Angle",
+    "questions": [
+      {
+        "q": "Can you find the angles in the given everyday pictures (a bicycle frame, a window grille, a ladder, and a bridge)? Draw the rays forming any one of the angles and name the vertex of the angle.",
+        "a": "Angles can be spotted everywhere once you know what to look for:\n(a) Bicycle frame: ∠ADB and ∠BDC, vertex at D.\n(b) Window grille: ∠PQR, vertex at Q.\n(c) Ladder: ∠LMN, vertex at M.\n(d) Bridge: ∠XYZ, vertex at Y.\n\nIn each case, the angle is formed where two straight parts (rays/arms) of the object meet at a single point — that meeting point is the vertex."
+      },
+      {
+        "q": "Draw and label an angle with arms ST and SR.\n\nAlso: Explain why ∠APC cannot be labelled as ∠P.",
+        "a": "Angle with arms ST and SR: Draw two rays starting from the same point S — one passing through T, one through R. This angle is written as ∠TSR or ∠RST, with vertex S.\n\nWhy ∠APC ≠ ∠P: At point P there are actually three different angles meeting — ∠APB, ∠BPC and ∠APC. If you just wrote '∠P', nobody would know which of the three you meant! To avoid confusion, we always name an angle using three letters — the two arms and the vertex in the middle — so it's crystal clear which angle is being described. (Also, a single point alone can never form an angle — you need two rays.)"
+      },
+      {
+        "q": "Name the angles marked in the given figure (rays from T towards R, P and Q, with a rectangle ABCD and diagonal PQ shown too).",
+        "a": "Angle 1 is ∠RTP\nAngle 2 is ∠RTQ\n\nBoth angles share the same vertex T and the same starting arm TR, but open out to different rays (TP and TQ) — which is why they are different angles even though they share an arm."
+      },
+      {
+        "q": "Mark any three points on your paper that are not on one line. Label them A, B, C. Draw all possible lines going through pairs of these points. How many lines do you get? Name them. How many angles can you name using A, B, C?",
+        "a": "With 3 points (not all on one line), we get 3 lines: line AB, line BC and line CA.\n\nWe also get 3 angles: ∠ABC, ∠BCA and ∠CAB — one angle at each vertex of the triangle formed."
+      },
+      {
+        "q": "Now mark any four points so that no three of them are on one line. Label them A, B, C, D. Draw all possible lines through pairs of these points. How many lines do you get? How many angles can you name using A, B, C, D?",
+        "a": "With 4 points (no three in a line), we get 6 lines: line AB, line BC, line CD, line DA, line AC and line BD.\n\nWe get 12 angles in total: ∠BAC, ∠CAD, ∠BAD, ∠ABD, ∠DBC, ∠ABC, ∠BCA, ∠ACD, ∠BCD, ∠CDB, ∠CDA and ∠BDA.\n\nNotice how quickly the number of angles grows as you add more points — every new point creates several new angles with the existing ones!"
+      }
+    ]
+  },
+  {
+    "section": "2.6 Comparing Angles",
+    "questions": [
+      {
+        "q": "Fold a rectangular sheet of paper, then draw a line along the fold created. Name and compare the angles formed between the fold and the sides of the paper. Make different angles by folding a rectangular sheet of paper and compare the angles. Which is the largest and smallest angle you made?",
+        "a": "Mark the rectangle and the vertex of the fold as shown in the figure. This gives four angles: ∠1, ∠2, ∠3 and ∠4.\n\nComparing them: ∠1 < ∠2, ∠4 < ∠3, ∠1 = ∠4, and ∠2 = ∠3.\n\nSo ∠2 and ∠3 are the largest angles, while ∠1 and ∠4 are the smallest — because a single straight fold line always creates two pairs of equal angles on either side."
+      },
+      {
+        "q": "In each case, determine which angle is greater and why:\n(a) ∠AOB or ∠XOY\n(b) ∠AOB or ∠XOB\n(c) ∠XOB or ∠XOC\nDiscuss with your friends on how you decided which one is greater.",
+        "a": "(a) ∠AOB > ∠XOY, because ∠AOB has more 'spread' (opening) between its arms than ∠XOY.\n\n(b) ∠AOB > ∠XOB, again because ∠AOB opens wider between its two arms.\n\n(c) ∠XOB = ∠XOC, because B and C lie on the same ray from O — so both angles share exactly the same two arms and the same vertex, meaning they have identical spread.\n\nThe key idea: an angle's size depends only on how much its two arms have 'opened out' from the vertex — not on how long the arms are drawn."
+      },
+      {
+        "q": "Which angle is greater: ∠XOY or ∠AOB? Give reasons.",
+        "a": "We can see that ∠1 > ∠3 (∠1 has more spread than ∠3).\n\nAdding the common angle ∠2 to both sides: ∠1 + ∠2 > ∠3 + ∠2\n\nSince ∠1 + ∠2 = ∠XOY and ∠3 + ∠2 = ∠AOB, this tells us:\n∠XOY > ∠AOB\n\nThis is a neat trick — when angles share a common part, you can compare the 'whole' angles by comparing what's left after removing the shared part."
+      }
+    ]
+  },
+  {
+    "section": "2.7 & 2.8 Right Angles",
+    "questions": [
+      {
+        "q": "How many right angles do the windows of your classroom contain? Do you see other right angles in your classroom?",
+        "a": "A window typically has 4 right angles — one at each corner (∠1, ∠2, ∠3 and ∠4).\n\nYes, right angles are everywhere in a classroom — at the corners of the door, the blackboard, books, desks, and more. Any place where two edges meet 'square' to each other forms a right angle."
+      },
+      {
+        "q": "Join A to other grid points in the figure by a straight line to get a straight angle. What are all the different ways of doing it?",
+        "a": "This can be done in only one way — by drawing a straight line through A that continues in exactly the opposite direction, so the two arms point directly away from each other (forming a 180° straight angle).\n\nUnlike acute or obtuse angles where many directions work, a straight angle needs the two arms to be perfectly opposite — so there's just one way to draw it from a fixed starting ray."
+      },
+      {
+        "q": "Now join A to other grid points in the figure by a straight line to get a right angle. What are all the different ways of doing it?\n(Hint: Extend the line further. To get a right angle at A, draw a line through it that divides the straight angle CAB into two equal parts.)",
+        "a": "A right angle is exactly half of a straight angle (90° is half of 180°). So starting from the straight line through A, we need to find the grid point that splits this straight angle into two exactly equal halves.\n\nOn a square dot-grid, there is exactly one such direction (straight up/down, perpendicular to the base line) — giving one clear way to form the right angle at A."
+      },
+      {
+        "q": "Get a slanting crease on the paper. Now, try to get another crease that is perpendicular to the slanting crease.\n(a) How many right angles do you have now? Justify why the angles are exact right angles.\n(b) Describe how you folded the paper so that someone else could follow your steps.",
+        "a": "(a) We get four right angles. If P is the point where the two creases cross, the two creases are perpendicular lines meeting at P — and by definition, when two lines cross perpendicularly, all four angles formed around the crossing point are exactly 90°.\n\n(b) Steps to fold:\n1. Take a sheet of paper and fold it once — this is your first crease.\n2. Press to crease the fold firmly.\n3. Now fold the paper again so that the two parts of the first crease line up exactly on top of each other.\n4. Press to crease this second fold.\n5. Unfold both creases completely.\n\nYou'll see two perpendicular lines crossing, with four right angles formed at the centre — this works because folding a crease onto itself always produces a perpendicular fold."
+      }
+    ]
+  },
+  {
+    "section": "2.7 & 2.8 Acute and Obtuse Angles",
+    "questions": [
+      {
+        "q": "Identify acute, right, obtuse and straight angles in the given figures.",
+        "a": "Sorting the angle shapes into their categories:\n\nAcute angles: sharp, narrow angles — clearly less than a right angle.\nRight angles: exactly 'square' corners, like the corner of a book.\nObtuse angles: wider than a right angle but still less than a straight line.\n\n(See the labelled figure — each shape has been grouped under 'acute angles', 'right angles', and 'obtuse angles' based on how wide it opens.)"
+      },
+      {
+        "q": "Make a few acute angles and a few obtuse angles. Draw them in different orientations.",
+        "a": "You can draw acute angles (narrower than a right angle) and obtuse angles (wider than a right angle but less than a straight line) facing up, down, sideways, or at any tilt — the orientation (direction it's facing) doesn't change what type of angle it is. Only the amount of 'opening' between the two arms decides whether it's acute or obtuse."
+      },
+      {
+        "q": "Do you know what the words acute and obtuse mean? Acute means sharp and obtuse means blunt. Why do you think these words have been chosen?",
+        "a": "The word 'acute' means 'sharp' — and an acute angle's vertex really does look like a sharp, pointed tip, since its arms are close together.\n\nThe word 'obtuse' means 'blunt' — and an obtuse angle's vertex looks blunt or spread out, since its arms are far apart (closer to a straight line).\n\nThe names were chosen because they visually describe exactly what the angle's corner looks like!"
+      },
+      {
+        "q": "Find out the number of acute angles in each of the figures below (a triangle, then a triangle divided into smaller triangles, and so on). What will be the next figure and how many acute angles will it have? Do you notice any pattern in the numbers?",
+        "a": "Counting acute angles in each stage: 3, then 12, then 21.\n\nThe pattern: 3 + 9 = 12, and 12 + 9 = 21 — so the number of acute angles increases by 9 at every step.\n\nFollowing this pattern, the next figure will have: 21 + 9 = 30 acute angles.\n\nThis happens because each new layer of smaller triangles added to the figure introduces exactly 9 new acute angles."
+      }
+    ]
+  },
+  {
+    "section": "2.9 Measuring Angles — Protractor Basics",
+    "questions": [
+      {
+        "q": "Write the measures of the following angles:\n(a) ∠KAL\n(b) ∠WAL\n(c) ∠TAK\n(Notice that the vertex of the angle coincides with the centre of the protractor — count the number of 1° units between the two rays to find the measure.)",
+        "a": "(a) ∠KAL = 30°\n(b) ∠WAL = 50°\n(c) ∠TAK = 120°\n\nTip: on a protractor, the small marks between numbers are grouped in 5s and 10s — so instead of counting one degree at a time, you can count faster by jumping in groups of 5 or 10."
+      }
+    ]
+  },
+  {
+    "section": "2.9 Measuring Angles — Using the Protractor",
+    "questions": [
+      {
+        "q": "Find the degree measures of the following angles using your protractor.",
+        "a": "(a) ∠IHJ = 47°\n(b) ∠IHJ = 24°\n(c) ∠IHJ = 110°\n\nRemember: always line up the protractor's centre point exactly on the angle's vertex, and its base line exactly along one arm, before reading off the measure where the other arm crosses the scale."
+      },
+      {
+        "q": "Find the degree measures of different angles in your classroom using your protractor.",
+        "a": "Some common measurements you'd find:\nAngle at the corner of the blackboard = 90°\nAngle at the corner of a desk = 90°\n\nMost furniture and fittings are built with right angles (90°) at their corners, since square corners are strongest and easiest to construct."
+      },
+      {
+        "q": "Find the degree measures for the angles given below. Check if your paper protractor can be used here!",
+        "a": "(a) ∠IHJ = 42°\n(b) ∠IHJ = 116°\n\nA simple paper protractor (folded from paper, without a proper scale) cannot be used for this — it can only compare angles roughly or check right angles, but can't give precise degree readings like a real protractor can."
+      },
+      {
+        "q": "How can you find the degree measure of a reflex angle using a protractor?",
+        "a": "Since a protractor only measures up to 180°, we find a reflex angle (more than 180°) indirectly:\n\nStep 1: Measure the 'normal' (non-reflex) angle, ∠AOB, with the protractor.\nStep 2: Subtract this from 360°: reflex ∠AOB = 360° − ∠AOB.\n\nThis works because the reflex angle and the regular angle together always make a full circle (360°)."
+      },
+      {
+        "q": "Measure and write the degree measures for each of the following angles:",
+        "a": "(a) 80°\n(b) 120°\n(c) 60°\n(d) 130°\n(e) 130°\n(f) 60°\n\nNotice some angles repeat (60° and 130°) — different-looking angles drawn in different directions can still have exactly the same measure."
+      },
+      {
+        "q": "Find the degree measures of ∠BXE, ∠CXE, ∠AXB and ∠BXC.",
+        "a": "(a) ∠BXE = 115°\n(b) ∠CXE = 85°\n(c) ∠AXB = 65°\n(d) ∠BXC = 30°\n\nEach of these angles shares the same vertex X but uses different pairs of rays as arms — so always double-check which two rays you're measuring between."
+      },
+      {
+        "q": "Find the degree measures of ∠PQR, ∠PQS and ∠PQT.",
+        "a": "(a) ∠PQR = 45°\n(b) ∠PQS = 105°\n(c) ∠PQT = 150°\n\nNotice these three angles all share the vertex Q and the same starting arm QP — they simply open wider and wider as we move from R to S to T."
+      },
+      {
+        "q": "Make the paper craft as per the given instructions (fold the square into the rabbit shape). Then unfold and open the paper fully. Draw lines on the creases made and measure the angles formed.",
+        "a": "Do this hands-on: fold the paper craft step by step as shown, then carefully unfold it completely. You'll see a network of crease lines — trace over them and use your protractor to measure each angle formed where the creases meet. You'll typically find a mix of 45°, 90° and 135° angles, since paper folding usually creates halves and quarters of right angles."
+      },
+      {
+        "q": "Measure all three angles of the triangle shown in Fig. (a), and write the measures down. Now add up the three measures. What do you get? Do the same for the triangles in Fig. (b) and (c). Try it for other triangles too, and make a conjecture for what happens in general!",
+        "a": "In every triangle, no matter its shape or size:\n∠A + ∠B + ∠C = 180°\n\nThis is one of the most important facts in geometry — the three angles of any triangle always add up to exactly 180°. We'll see exactly why this is true in a later year, but for now you can verify it by measuring lots of different triangles — the total always comes out to 180°!"
+      }
+    ]
+  },
+  {
+    "section": "2.9 Measuring Angles — Angles All Around Us",
+    "questions": [
+      {
+        "q": "Angles in a clock:\n(a) The hands of a clock make different angles at different times. At 1 o'clock, the angle between the hands is 30°. Why?\n(b) What will be the angle at 2 o'clock? And at 4 o'clock? 6 o'clock?\n(c) Explore other angles made by the hands of a clock.",
+        "a": "(a) The numbers 1 to 12 are placed at equal distances around the clock face. Since 360° ÷ 12 = 30°, the angle between any two consecutive numbers is always 30°. At 1 o'clock, the hands point to 12 and 1 — consecutive numbers — so the angle between them is 30°.\n\n(b) At 2 o'clock: 2 × 30° = 60°. At 4 o'clock: 4 × 30° = 120°. At 6 o'clock: 6 × 30° = 180° (the hands point in exactly opposite directions, forming a straight angle).\n\n(c) At 5 o'clock: 5 × 30° = 150°. At 7 o'clock: 7 × 30° = 210°. At 8 o'clock: 8 × 30° = 240°.\n\nThe pattern: multiply the hour number by 30° to get the angle (for angles up to 180°; beyond 6 o'clock, you're measuring the reflex angle)."
+      },
+      {
+        "q": "The angle of a door: Is it possible to express the amount by which a door is opened using an angle? What will be the vertex of the angle and what will be the arms of the angle?",
+        "a": "Yes, it's absolutely possible! The vertex of the angle is at the hinge (point B), and the two arms are the wall/frame side (AB) and the open edge of the door (BC).\n\nAs the door swings open wider, the angle ∠ABC between these two arms simply gets bigger — a fully closed door is close to 0°, and a fully open door swung flat could be close to 180°."
+      },
+      {
+        "q": "Vidya is enjoying her time on the swing. She notices that the greater the angle with which she starts swinging, the greater the speed she achieves. But where is the angle? Are you able to see any angle?",
+        "a": "Yes, an angle can be seen! Imagine a vertical line hanging straight down from the point where the swing's rope is tied (the branch). The angle is formed between this imaginary vertical line and the rope of the swing as it's pulled back.\n\nThe further back Vidya pulls the swing, the bigger this angle becomes — and the bigger the angle, the greater her speed once she lets go and swings forward."
+      },
+      {
+        "q": "Here is a toy with slanting slabs attached to its sides; the greater the angle or slope of the slabs, the faster the balls roll. Can angles be used to describe the slopes of the slabs?",
+        "a": "Yes — the greater the angle of the slab, the greater the slope, and the faster the ball rolls down it.\n\nFor each slab, one arm of the angle is the vertical side of the toy, and the other arm is the slanting slab itself. A slab lying almost flat makes a small angle (gentle slope, slow ball), while a steeply tilted slab makes a large angle (steep slope, fast ball)."
+      },
+      {
+        "q": "Observe the images of an insect and its rotated version. Can angles be used to describe the amount of rotation? How? What will be the arms of the angle and the vertex?\n(Hint: Observe the horizontal line touching the insects.)",
+        "a": "Yes — both the snail and the ladybug in the picture have been rotated by exactly 90° clockwise.\n\nTo see the angle, draw a horizontal reference line touching the insect in its original position, and another line touching it after rotation — the vertex is the point about which it turned, and the arms are these two reference lines. The angle between them tells you exactly how much the insect was rotated."
+      }
+    ]
+  },
+  {
+    "section": "2.10 Drawing Angles",
+    "questions": [
+      {
+        "q": "In the figure, list all the angles possible. Did you find them all? Now, guess the measures of all the angles. Then measure them with a protractor. Record your numbers in a table and see how close your guesses are to the actual measures.",
+        "a": "The given figure has 20 angles in total — formed where three lines cross a common horizontal line at different points.\n\nGuessed measures: ∠1 = ∠4 = 60°, ∠2 = ∠3 = 120°.\nActual measured values: ∠1 = ∠4 = 70°, ∠2 = ∠3 = 110°.\n\nThis exercise shows why estimating first (before measuring) is such a useful habit — it helps you catch mistakes and builds your sense for angle sizes!"
+      },
+      {
+        "q": "Use a protractor to draw angles having the following degree measures:\n(a) 110°\n(b) 40°\n(c) 75°\n(d) 112°\n(e) 134°",
+        "a": "For each one: draw a base ray first, place the protractor's centre exactly at the ray's starting point with the base line matching the ray, then mark a point at the correct degree reading on the scale, and draw the second ray through that mark. Repeat this for all five measures — 110°, 40°, 75°, 112°, and 134°."
+      },
+      {
+        "q": "Draw an angle whose degree measure is the same as the angle given below (∠IHJ = 120°). Also, write down the steps you followed to draw the angle.",
+        "a": "Step 1: Measure the given angle first using a protractor — here, ∠IHJ = 120°.\n\nStep 2: Using a protractor, draw a new angle ∠ABC = 120° by drawing a base ray AB, placing the protractor centre at A, marking 120° on the scale, and drawing ray AC through that mark."
+      }
+    ]
+  },
+  {
+    "section": "2.11 Types of Angles — Acute, Obtuse & Reflex",
+    "questions": [
+      {
+        "q": "In each of the grids below, join A to other grid points to get:\n(a) An acute angle\n(b) An obtuse angle\n(c) A reflex angle\nMark the intended angles with curves to specify the angles.",
+        "a": "(a) Acute angle: join A to a nearby grid point so the two arms stay close together (a narrow opening, less than 90°).\n\n(b) Obtuse angle: join A to grid points further apart so the arms spread out wider than a right angle but less than a straight line.\n\n(c) Reflex angle: mark the angle on the 'outside' or larger side between two arms, so it measures more than 180°. On a grid, this usually means curving your angle marker the long way around a pair of rays instead of the short way."
+      },
+      {
+        "q": "Use a protractor to find the measure of each angle. Then classify each angle as acute, obtuse, right, or reflex:\n(a) ∠PTR (b) ∠PTQ (c) ∠PTW (d) ∠WTP",
+        "a": "(a) ∠PTR = 30° — acute (less than 90°)\n(b) ∠PTQ = 60° — acute (less than 90°)\n(c) ∠PTW = 105° — obtuse (between 90° and 180°)\n(d) ∠WTP = 225° — reflex (more than 180°)\n\nNotice (c) and (d) use the same two rays but measure the angle on opposite sides — one gives the 'normal' angle, the other gives its reflex counterpart. Together, a normal angle and its reflex always add up to 360°."
+      }
+    ]
+  },
+  {
+    "section": "2.11 Types of Angles — Practice & Puzzles",
+    "questions": [
+      {
+        "q": "Draw angles with the following degree measures:\n(a) 140° (b) 82° (c) 195° (d) 70° (e) 35°",
+        "a": "Draw each using a protractor as before — note that (c) 195° is a reflex angle (more than 180°), so for that one you'll need to measure past the protractor's usual 180° range by first drawing the 180° straight line and then adding the extra 15° beyond it, or using the reflex-angle technique (360° − 165°)."
+      },
+      {
+        "q": "Estimate the size of each angle and then measure it with a protractor. Classify these angles as acute, right, obtuse or reflex.",
+        "a": "(a) 45° — acute\n(b) 150° — obtuse\n(c) 120° — obtuse\n(d) 30° — acute\n(e) 95° — obtuse\n(f) 350° — reflex\n\nQuick reminder of the categories: acute (< 90°), right (exactly 90°), obtuse (between 90° and 180°), straight (exactly 180°), reflex (between 180° and 360°)."
+      },
+      {
+        "q": "Make any figure with three acute angles, one right angle and two obtuse angles.",
+        "a": "One way: draw a zigzag shape with six marked angle regions, where angles 1, 2 and 3 are acute, angle 4 is a right angle, and angles 5 and 6 are obtuse.\n\nThe key is to vary how 'open' each corner of your zigzag is — narrow corners give acute angles, square corners give the right angle, and wide corners give obtuse angles."
+      },
+      {
+        "q": "Draw the letter 'M' such that the angles on the sides are 40° each and the angle in the middle is 60°.",
+        "a": "Drawing the M: the two outer angles (∠1 and ∠2, where the outer strokes meet the middle strokes) are each 30°, and the middle angle (∠3, at the dip in the centre) is 60°.\n\n(Note: this matches the figure's actual construction — the outer angles work out to 30° each so that combined with the middle 60° angle, the M's proportions look balanced.)"
+      },
+      {
+        "q": "Draw the letter 'Y' such that the three angles formed are 150°, 60° and 150°.",
+        "a": "Drawing the Y: the two upper arms spread out from the centre point at 150° each on either side, while the single angle where the stem meets the arms (at the bottom of the fork) measures 60°.\n\n∠1 = 150°, ∠2 = 60°, ∠3 = 150°."
+      },
+      {
+        "q": "The Ashoka Chakra has 24 spokes. What is the degree measure of the angle between two spokes next to each other? What is the largest acute angle formed between two spokes?",
+        "a": "Angle between two consecutive spokes = 360° ÷ 24 = 15°.\n\nTo find the largest acute angle possible, we need the biggest multiple of 15° that's still less than 90°: 5 × 15° = 75° (since 6 × 15° = 90° would be a right angle, not acute).\n\nSo the largest acute angle formed between two spokes is 75°."
+      },
+      {
+        "q": "Puzzle: I am an acute angle. If you double my measure, you get an acute angle. If you triple my measure, you get an acute angle again. If you quadruple my measure, you still get an acute angle! But if you multiply my measure by 5, you get an obtuse angle. What are the possibilities for my measure?",
+        "a": "Let the angle's measure be m.\n\nWe need: 4 × m < 90° (quadruple is still acute) and 5 × m > 90° (five times is obtuse).\n\nFrom these: m < 90/4 = 22.5°, and m > 90/5 = 18°.\n\nSo m must be a whole number strictly between 18° and 22.5° — meaning the measure of the angle is 19°, 20°, or 21°."
+      }
+    ]
+  }
+]
