@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maths Buddy — Class 6 NCERT</title>
-  <meta name="description" content="Free AI-powered maths exam prep for Class 6 NCERT students. Practice chapter-wise questions with answers."/>
+  <title>DAV6StudyBuddy — Free Class 6 Exam Prep</title>
+  <meta name="description" content="Free exam prep portal for DAV Class 6 — practice Maths and Sanskrit chapter-wise, question by question."/>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #f0f4ff;
+      font-family: 'Nirmala UI', 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+      background: #f4f4f8;
       min-height: 100vh;
     }
 
     header {
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      background: linear-gradient(135deg, #4f46e5, #ea580c);
       color: white;
-      padding: 40px 20px 36px;
+      padding: 48px 20px 40px;
       text-align: center;
     }
-    header .emoji { font-size: 2.8rem; margin-bottom: 10px; }
-    header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; }
-    header p  { font-size: 1rem; opacity: 0.85; margin-top: 8px; max-width: 420px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+    header .emoji { font-size: 3rem; margin-bottom: 10px; }
+    header h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; }
+    header p  { font-size: 1rem; opacity: 0.9; margin-top: 8px; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.5; }
 
     .badge {
       display: inline-block;
       background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.3);
+      border: 1px solid rgba(255,255,255,0.32);
       border-radius: 20px;
       padding: 5px 16px;
       font-size: 0.78rem;
@@ -39,7 +39,7 @@
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 32px 16px 48px;
+      padding: 36px 16px 48px;
     }
 
     .section-title {
@@ -51,76 +51,62 @@
       margin-bottom: 16px;
     }
 
-    .chapters-grid {
+    .subjects-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 14px;
+      gap: 18px;
     }
 
-    .chapter-card {
+    .subject-card {
       background: white;
-      border-radius: 16px;
-      padding: 20px 22px;
+      border-radius: 20px;
+      padding: 28px 26px;
       display: flex;
       align-items: center;
-      gap: 18px;
-      box-shadow: 0 2px 10px rgba(79,70,229,0.07);
+      gap: 20px;
+      box-shadow: 0 4px 18px rgba(31,41,55,0.08);
       text-decoration: none;
       color: inherit;
       transition: transform 0.15s, box-shadow 0.15s;
       border: 2px solid transparent;
     }
-    .chapter-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(79,70,229,0.14);
-      border-color: #c4b5fd;
+    .subject-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(31,41,55,0.14);
     }
-    .chapter-card.locked {
-      opacity: 0.55;
-      cursor: default;
-      pointer-events: none;
-    }
+    .subject-card.maths:hover { border-color: #c4b5fd; }
+    .subject-card.sanskrit:hover { border-color: #fdba74; }
 
-    .chapter-num {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    .subject-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
-      font-weight: 800;
+      font-size: 1.8rem;
       flex-shrink: 0;
     }
-    .chapter-card.locked .chapter-num {
-      background: #d1d5db;
-    }
+    .subject-card.maths .subject-icon { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+    .subject-card.sanskrit .subject-icon { background: linear-gradient(135deg, #ea580c, #c2410c); }
 
-    .chapter-info { flex: 1; }
-    .chapter-info h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
+    .subject-info { flex: 1; }
+    .subject-info h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
       color: #1f2937;
       margin-bottom: 4px;
     }
-    .chapter-info p {
-      font-size: 0.8rem;
+    .subject-info p {
+      font-size: 0.85rem;
       color: #6b7280;
+      line-height: 1.4;
     }
 
-    .chapter-arrow {
-      font-size: 1.1rem;
-      color: #4f46e5;
-    }
-    .coming-soon {
-      font-size: 0.7rem;
-      background: #f3f4f6;
+    .subject-arrow {
+      font-size: 1.3rem;
       color: #9ca3af;
-      padding: 3px 10px;
-      border-radius: 10px;
-      font-weight: 600;
     }
 
     footer {
@@ -134,96 +120,33 @@
 <body>
 
 <header>
-  <div class="emoji">🧮</div>
-  <h1>Maths Buddy</h1>
-  <p>Free exam prep for Class 6 NCERT Mathematics — practice every chapter, question by question</p>
-  <span class="badge">📚 Ganita Prakash · 2025–26 Syllabus</span>
+  <div class="emoji">🎓</div>
+  <h1>DAV6StudyBuddy</h1>
+  <p>Free exam prep for DAV Class 6 — pick a subject and practice every chapter, question by question</p>
+  <span class="badge">📚 CBSE · DAV Board · 2025–26 Syllabus</span>
 </header>
 
 <div class="container">
-  <p class="section-title">Select a Chapter</p>
-  <div class="chapters-grid">
+  <p class="section-title">Select a Subject</p>
+  <div class="subjects-grid">
 
-    <a class="chapter-card" href="chapter1.html">
-      <div class="chapter-num">1</div>
-      <div class="chapter-info">
-        <h3>Patterns in Mathematics</h3>
-        <p>Number sequences · Shape patterns · Triangular, Square &amp; Cube numbers</p>
+    <a class="subject-card maths" href="maths_index.html">
+      <div class="subject-icon">🧮</div>
+      <div class="subject-info">
+        <h3>Maths Buddy</h3>
+        <p>NCERT Ganita Prakash · Patterns, Lines &amp; Angles, and more</p>
       </div>
-      <span class="chapter-arrow">→</span>
+      <span class="subject-arrow">→</span>
     </a>
 
-    <a class="chapter-card" href="chapter2.html">
-      <div class="chapter-num">2</div>
-      <div class="chapter-info">
-        <h3>Lines and Angles</h3>
-        <p>Rays &amp; angles · Comparing &amp; measuring angles · Types of angles</p>
+    <a class="subject-card sanskrit" href="sanskrit_index.html">
+      <div class="subject-icon">🕉️</div>
+      <div class="subject-info">
+        <h3>Sanskrit Buddy</h3>
+        <p>NCERT दीपकम् (Deepakam) · Alphabet, Conjunct Consonants, and more</p>
       </div>
-      <span class="chapter-arrow">→</span>
+      <span class="subject-arrow">→</span>
     </a>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">3</div>
-      <div class="chapter-info">
-        <h3>Number Play</h3>
-        <p>Number games · Divisibility · Fun with numbers</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">4</div>
-      <div class="chapter-info">
-        <h3>Data Handling and Presentation</h3>
-        <p>Tally marks · Bar graphs · Data collection</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">5</div>
-      <div class="chapter-info">
-        <h3>Prime Time</h3>
-        <p>Prime &amp; composite numbers · LCM &amp; HCF · Factorisation</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">6</div>
-      <div class="chapter-info">
-        <h3>Perimeter and Area</h3>
-        <p>Perimeter of shapes · Area calculations · Real-life problems</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">7</div>
-      <div class="chapter-info">
-        <h3>Fractions</h3>
-        <p>Types of fractions · Addition &amp; subtraction · Equivalent fractions</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">9</div>
-      <div class="chapter-info">
-        <h3>Symmetry</h3>
-        <p>Lines of symmetry · Reflection · Symmetric figures</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
-
-    <div class="chapter-card locked">
-      <div class="chapter-num">10</div>
-      <div class="chapter-info">
-        <h3>The Other Side of Zero</h3>
-        <p>Negative numbers · Number line · Integers</p>
-      </div>
-      <span class="coming-soon">Coming Soon</span>
-    </div>
 
   </div>
 </div>

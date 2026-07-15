@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1: वयं वर्णमालां पठामः — Sanskrit Buddy</title>
+  <meta name="description" content="Practice questions and answers for Class 6 Sanskrit Chapter 1: वयं वर्णमालां पठामः (We Study the Alphabet) — NCERT Deepakam"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nirmala UI', 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+      background: #f0f4ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 16px 20px 12px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p  { font-size: 0.8rem; opacity: 0.85; margin-top: 3px; }
+
+    .section-bar {
+      width: 100%;
+      max-width: 720px;
+      padding: 12px 16px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      -webkit-overflow-scrolling: touch;
+    }
+    .section-bar::-webkit-scrollbar { height: 4px; }
+    .section-bar::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 4px; }
+
+    .sec-btn {
+      white-space: nowrap;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 2px solid #e0e0e0;
+      background: white;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #666;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .sec-btn.active {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: white;
+    }
+    .sec-btn:hover:not(.active) { border-color: #4f46e5; color: #4f46e5; }
+
+    .main {
+      width: 100%;
+      max-width: 720px;
+      padding: 20px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .progress-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      border-radius: 10px;
+      transition: width 0.4s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(79,70,229,0.08);
+      overflow: hidden;
+    }
+
+    .card-question {
+      padding: 24px 22px;
+      border-left: 5px solid #4f46e5;
+    }
+    .card-question .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #4f46e5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .card-question p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #1f2937;
+      white-space: pre-wrap;
+    }
+
+    .en-translation {
+      font-size: 0.82rem;
+      color: #6b7280;
+      font-style: italic;
+      margin-top: 10px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .card-imgs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .card-imgs img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #fafafa;
+    }
+
+    .show-btn {
+      width: 100%;
+      padding: 14px;
+      background: #f5f3ff;
+      border: none;
+      border-top: 1px solid #ede9fe;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4f46e5;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .show-btn:hover { background: #ede9fe; }
+
+    .card-answer {
+      padding: 22px;
+      background: #f8fff8;
+      border-top: 1px solid #d1fae5;
+      display: none;
+    }
+    .card-answer.visible { display: block; }
+    .card-answer .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .card-answer p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #1f2937;
+      white-space: pre-wrap;
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .nav-btn {
+      flex: 1;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.prev {
+      background: white;
+      color: #4f46e5;
+      border: 2px solid #4f46e5;
+    }
+    .nav-btn.prev:hover { background: #f5f3ff; }
+    .nav-btn.next {
+      background: #4f46e5;
+      color: white;
+    }
+    .nav-btn.next:hover { background: #4338ca; }
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .done-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(79,70,229,0.08);
+      display: none;
+    }
+    .done-card.visible { display: block; }
+    .done-card .emoji { font-size: 3rem; margin-bottom: 14px; }
+    .done-card h2 { font-size: 1.2rem; color: #1f2937; margin-bottom: 8px; }
+    .done-card p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+    .done-card button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header style="position:relative;">
+  <a href="sanskrit_index.html" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.82rem;font-weight:600;">← Chapters</a>
+  <h1>🕉️ Sanskrit Buddy</h1>
+  <p>Class 6 · अध्यायः 1: वयं वर्णमालां पठामः (We Study the Alphabet)</p>
+</header>
+
+<div class="section-bar" id="section-bar"></div>
+
+<div class="main">
+  <div class="progress-row">
+    <span id="q-label">Question 1</span>
+    <span id="q-count"></span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <div class="card" id="main-card">
+    <div class="card-question">
+      <div class="label">Question</div>
+      <p id="q-text"></p>
+      <p class="en-translation" id="q-text-en"></p>
+      <div class="card-imgs" id="q-imgs"></div>
+    </div>
+    <button class="show-btn" id="show-btn" onclick="showAnswer()">👁 Show Answer</button>
+    <div class="card-answer" id="answer-box">
+      <div class="label">Answer</div>
+      <p id="a-text"></p>
+      <p class="en-translation" id="a-text-en"></p>
+      <div class="card-imgs" id="a-imgs"></div>
+    </div>
+  </div>
+
+  <div class="done-card" id="done-card">
+    <div class="emoji">🎉</div>
+    <h2>Section Complete!</h2>
+    <p>You've gone through all questions in this section. Well done!</p>
+    <button onclick="restart()">🔁 Start Again</button>
+  </div>
+
+  <div class="nav-row">
+    <button class="nav-btn prev" id="prev-btn" onclick="prevQ()">← Previous</button>
+    <button class="nav-btn next" id="next-btn" onclick="nextQ()">Next →</button>
+  </div>
+</div>
+
+<script>
+const DATA = [{"section": "वर्णाः – परिचयः", "questions": [{"q": "वर्णाः कति-विधाः भवन्ति? के?", "qEn": "How many kinds of letters (वर्ण) are there? What are they?", "a": "वर्णाः द्विविधाः भवन्ति – स्वराः (vowels) व्यञ्जनानि (consonants) च।", "aEn": "Letters are of two kinds — स्वराः (vowels) and व्यञ्जनानि (consonants)."}, {"q": "स्वराः कति-विधाः? के?", "qEn": "How many kinds of vowels are there? What are they?", "a": "स्वराः द्विविधाः सन्ति –\n1. समानाक्षराणि (simple vowels): अ आ, इ ई, उ ऊ, ऋ ॠ, ऌ (दीर्घः न सन्ति)\n2. सन्ध्यक्षराणि (compound vowels): ए ऐ ओ औ – द्वयोः निश्चित-स्वरयोः सन्धिद्वारा जायन्ते।", "aEn": "Vowels are of two kinds:\n1. समानाक्षराणि (simple vowels): अ आ, इ ई, उ ऊ, ऋ ॠ, ऌ (this last has no long form)\n2. सन्ध्यक्षराणि (compound vowels): ए ऐ ओ औ — formed by joining (sandhi) two fixed vowels."}, {"q": "समानाक्षर-स्वराः इति के? उदाहरणानि ददतु।", "qEn": "What are समानाक्षर (simple) vowels? Give examples.", "a": "वर्णमालायाम् आदौ ये सामान्याः स्वराः सन्ति, ते समानाक्षर-स्वराः भवन्ति। यथा – अ, आ, इ, ई, उ, ऊ, ऋ, ॠ, ऌ।", "aEn": "The basic vowels at the start of the alphabet are called समानाक्षर-स्वराः. Examples — अ, आ, इ, ई, उ, ऊ, ऋ, ॠ, ऌ."}, {"q": "सन्ध्यक्षर-स्वराः कथं जायन्ते? उदाहरणैः स्पष्टीकुर्वन्तु।", "qEn": "How are सन्ध्यक्षर (compound) vowels formed? Explain with examples.", "a": "द्वयोः निश्चित-स्वरयोः सन्धिद्वारा ये नवीनाः स्वर-वर्णाः जायन्ते, ते सन्ध्यक्षर-स्वराः भवन्ति।\nअ + इ = ए\nअ + ए = ऐ\nअ + उ = ओ\nअ + ओ = औ", "aEn": "New vowel letters formed by joining two fixed vowels are called सन्ध्यक्षर-स्वराः.\nअ + इ = ए\nअ + ए = ऐ\nअ + उ = ओ\nअ + ओ = औ"}, {"q": "अनुनासिक-स्वराः इति के?", "qEn": "What are nasalized vowels (अनुनासिक-स्वराः)?", "a": "मुखेन सह नासिकया अपि उच्चारिताः स्वराः अनुनासिक-स्वराः भवन्ति – अँ, आँ, इँ, ईँ, उँ, ऊँ, ऋँ, ॠँ, ऌँ, एँ, ऐँ, ओँ, औँ।", "aEn": "Vowels pronounced through the nose along with the mouth are nasalized vowels — अँ, आँ, इँ, ईँ, उँ, ऊँ, ऋँ, ॠँ, ऌँ, एँ, ऐँ, ओँ, औँ."}, {"q": "व्यञ्जनानाम् उच्चारणे कस्य स्वरस्य योजनं भवति? किमर्थम्?", "qEn": "Which vowel is added when pronouncing consonants, and why?", "a": "व्यञ्जनानाम् उच्चारणे कस्यचित् स्वरस्य सहायतायाः अपेक्षा अवश्यं भवति। अतः वर्णमालायां व्यञ्जनानाम् उच्चारणार्थं सर्वत्र 'अ' स्वरस्य योजनं भवति। उदाहरणम् – क् + अ = क, ख् + अ = ख। अत्र व्यञ्जनं केवलं क्, ख् इत्येव अस्ति; 'अ' स्वरः केवलम् उच्चारणार्थं योजितः अस्ति।", "aEn": "A consonant always needs the help of some vowel to be pronounced. So in the alphabet, the vowel 'अ' is added everywhere just to make consonants pronounceable. Example: क्+अ=क, ख्+अ=ख. The actual consonant is only क्, ख् — the 'अ' is added purely for pronunciation."}, {"q": "व्यञ्जनानां चत्वारः भेदाः के?", "qEn": "What are the four types of consonants?", "a": "1. स्पर्शाः (वर्ग्याः) वर्णाः – पञ्चसु वर्गेषु विभक्ताः\n2. अन्तःस्थाः वर्णाः – य र ल व\n3. ऊष्म-वर्णाः – श ष स ह\n4. अयोगवाहौ वर्णौ – अं (अनुस्वारः), अः (विसर्गः)", "aEn": "1. स्पर्श (stop) consonants — divided into 5 groups\n2. अन्तःस्थ (semi-vowel) consonants — य र ल व\n3. ऊष्म (sibilant) consonants — श ष स ह\n4. अयोगवाह pair — अं (anusvara), अः (visarga)"}, {"q": "स्पर्शाः (वर्ग्याः) वर्णाः पञ्चसु वर्गेषु कथं विभक्ताः? प्रत्येकं वर्गं लिखन्तु।", "qEn": "How are the स्पर्श (stop) consonants divided into five groups? List each group.", "a": "क-वर्गः – क ख ग घ ङ\nच-वर्गः – च छ ज झ ञ\nट-वर्गः – ट ठ ड ढ ण\nत-वर्गः – त थ द ध न\nप-वर्गः – प फ ब भ म\n\nस्पर्शाः (वर्ग्याः) व्यञ्जनवर्णाः स्वकीय-उच्चारण-स्थानानुसारेण एतेषु पञ्चसु वर्गेषु विभक्ताः भवन्ति।", "aEn": "क-group – क ख ग घ ङ\nच-group – च छ ज झ ञ\nट-group – ट ठ ड ढ ण\nत-group – त थ द ध न\nप-group – प फ ब भ म\n\nStop consonants are divided into these five groups by their place of articulation."}, {"q": "अन्तःस्थाः वर्णाः इति के? तान् किमर्थं 'अर्ध-स्वराः' अपि वदन्ति?", "qEn": "What are अन्तःस्थ (semi-vowel) letters? Why are they also called 'half-vowels'?", "a": "य र ल व – एते अन्तःस्थाः वर्णाः भवन्ति। अन्तःस्थाः वर्णाः बहुत्र स्वर-वर्णानां स्थाने जायन्ते (यथा इ+अ→य्+अ, ऋ+अ→र्+अ, ऌ+अ→ल्+अ, उ+अ→व्+अ)। अतः एते 'अर्ध-स्वराः' इत्यपि उच्यन्ते।\nउदाहरणानि – यदि+अपि=यद्यपि, पितृ+आज्ञा=पित्राज्ञा, ऌ+आकृतिः=लाकृतिः, सु+आगतम्=स्वागतम्।", "aEn": "य र ल व are the अन्तःस्थ letters. They often appear in place of vowel letters (इ+अ→य्+अ, ऋ+अ→र्+अ, ऌ+अ→ल्+अ, उ+अ→व्+अ), hence called 'half-vowels'.\nExamples — यदि+अपि=यद्यपि (even if), पितृ+आज्ञा=पित्राज्ञा (father's order), ऌ+आकृतिः=लाकृतिः (shape of 'ऌ'), सु+आगतम्=स्वागतम् (welcome)."}, {"q": "ऊष्म-वर्णाः इति के? तेषाम् उच्चारण-समये किं भवति?", "qEn": "What are ऊष्म (sibilant) letters? What happens when pronouncing them?", "a": "श ष स ह – एते ऊष्म-वर्णाः भवन्ति। ऊष्मणां व्यञ्जन-वर्णानाम् उच्चारण-समये मुखात् उष्णः वायुः निस्सरति।", "aEn": "श ष स ह are the ऊष्म (sibilant) letters. Hot air is released from the mouth when pronouncing them."}, {"q": "अयोगवाहौ वर्णौ के? तयोः उच्चारणे 'अ' स्वरस्य योजनं कदा भवति?", "qEn": "What are the two अयोगवाह letters? When is the vowel 'अ' added while pronouncing them?", "a": "अं (अनुस्वारः) अः (विसर्गः) – एतौ द्वौ अयोगवाहौ स्तः। अत्र उच्चारणार्थं 'अ' स्वरस्य संयोजनं पूर्वं भवति, न तु पश्चात्।\nअं = अ + '॰' (बिन्दुः) → अनुस्वारः\nअः = अ + ':' → विसर्गः", "aEn": "अं (anusvara) and अः (visarga) are the two अयोगवाह letters. Here the vowel 'अ' is added before the mark, not after.\nअं = अ + dot → anusvara\nअः = अ + colon-like mark → visarga"}]}, {"section": "उच्चारण-स्थानानि", "questions": [{"q": "आस्ये (मुखे) वर्णानां कति उच्चारण-स्थानानि सन्ति? कानि?", "qEn": "How many places of articulation are there in the head? What are they?", "a": "आस्ये (Head) सामान्यतः षट् उच्चारण-स्थानानि (Six Places of Articulation) भवन्ति, येषु वर्णानाम् उत्पत्तिः भवति –\n1. कण्ठः (throat)\n2. तालु (palate)\n3. मूर्धा (cerebral region)\n4. दन्तः (teeth)\n5. ओष्ठः (lips)\n6. नासिका (nose)\n\nमुखे (Mouth) पञ्चसु स्थानेषु, नासिकायाम् (Nose) एकस्मिन् स्थाने वर्णानाम् उत्पत्तिः भवति।", "aEn": "There are generally six places of articulation in the head:\n1. कण्ठः (throat)\n2. तालु (palate)\n3. मूर्धा (roof of mouth / cerebral region)\n4. दन्तः (teeth)\n5. ओष्ठः (lips)\n6. नासिका (nose)\n\nFive places are in the mouth, one in the nose."}, {"q": "कण्ठ्याः वर्णाः के? (कण्ठस्थाने उच्चारिताः वर्णाः)", "qEn": "Which letters are pronounced at the throat (कण्ठ्य)?", "a": "अ आ, क ख ग घ ङ, ह, अः (विसर्गः) – एतेषाम् उच्चारणं कण्ठ-स्थाने भवति। (पाणिनीय-सूत्रम् – 'अकुहविसर्जनीयाः कण्ठ्याः')", "aEn": "अ आ, क ख ग घ ङ, ह, अः (visarga) are pronounced at the throat. (Panini's sutra: 'अकुहविसर्जनीयाः कण्ठ्याः')"}, {"q": "तालव्याः वर्णाः के?", "qEn": "Which letters are palatal (तालव्य)?", "a": "इ ई, च छ ज झ ञ, य, श – एतेषाम् उच्चारणं तालु-स्थाने भवति। (पाणिनीय-सूत्रम् – 'इचुयशास्तालव्याः')", "aEn": "इ ई, च छ ज झ ञ, य, श are pronounced at the palate. (Sutra: 'इचुयशास्तालव्याः')"}, {"q": "मूर्धन्याः वर्णाः के?", "qEn": "Which letters are cerebral/retroflex (मूर्धन्य)?", "a": "ऋ ॠ, ट ठ ड ढ ण, र, ष – एतेषाम् उच्चारणं मूर्ध-स्थाने भवति। (पाणिनीय-सूत्रम् – 'ऋटुरषा मूर्धन्याः')", "aEn": "ऋ ॠ, ट ठ ड ढ ण, र, ष are pronounced at the roof of the mouth. (Sutra: 'ऋटुरषा मूर्धन्याः')"}, {"q": "दन्त्याः वर्णाः के?", "qEn": "Which letters are dental (दन्त्य)?", "a": "ऌ, त थ द ध न, ल, स – एतेषाम् उच्चारणं दन्त-स्थाने भवति। (पाणिनीय-सूत्रम् – 'ऌतुलसा दन्त्याः')", "aEn": "ऌ, त थ द ध न, ल, स are pronounced at the teeth. (Sutra: 'ऌतुलसा दन्त्याः')"}, {"q": "ओष्ठ्याः वर्णाः के?", "qEn": "Which letters are labial (ओष्ठ्य)?", "a": "उ ऊ, प फ ब भ म – एतेषाम् उच्चारणम् ओष्ठ-स्थाने भवति। (पाणिनीय-सूत्रम् – 'उपूपध्मानीया ओष्ठ्याः')", "aEn": "उ ऊ, प फ ब भ म are pronounced at the lips. (Sutra: 'उपूपध्मानीया ओष्ठ्याः')"}, {"q": "नासिक्याः वर्णाः के? स्वस्थानेन सह नासिका-स्थाने अपि उच्चारिताः वर्णाः के?", "qEn": "Which letters are nasal? Which are pronounced at their own place plus the nose?", "a": "अं (अनुस्वारः) – एकः शुद्धः नासिक्यः वर्णः।\nङ, ञ, ण, न, म – एतेषाम् उच्चारणं स्वस्थानेन सह नासिका-स्थाने अपि भवति (ङ=कण्ठ+नासिका, ञ=तालु+नासिका, ण=मूर्धा+नासिका, न=दन्त+नासिका, म=ओष्ठ+नासिका)।", "aEn": "अं (anusvara) is the one purely nasal letter.\nङ, ञ, ण, न, म are pronounced at their own place as well as the nose — ङ=throat+nose, ञ=palate+nose, ण=cerebral+nose, न=teeth+nose, म=lips+nose."}, {"q": "द्विस्थानीय-वर्णाः के के? तेषां उच्चारण-स्थाने द्वयोः स्थानयोः नाम लिखन्तु।", "qEn": "Which letters are pronounced at two places? Name both places for each.", "a": "ए, ऐ – कण्ठ-तालव्यौ (कण्ठः + तालु)\nओ, औ – कण्ठोष्ठ्यौ (कण्ठः + ओष्ठः)\nव – दन्त्योष्ठ्यः (दन्तः + ओष्ठः)", "aEn": "ए, ऐ — throat + palate\nओ, औ — throat + lips\nव — teeth + lips"}]}, {"section": "परियोजनाकार्यम् (पक्षि-ध्वनयः)", "questions": [{"q": "चाषः (नीलकण्ठः) कति-मात्रं ध्वनिं करोति? सः कीदृशः स्वरः इव भवति?", "qEn": "How many मात्रा (time-units) does the चाष bird's (Indian Roller) call take? What type of vowel is it like?", "a": "चाषः एक-मात्रं ध्वनिं करोति (ह्रस्व-स्वरः इव)। श्लोके – 'चाषस्तु वदते मात्रां...'", "aEn": "The चाष bird makes a one-मात्रा sound, like a short (ह्रस्व) vowel."}, {"q": "वायसः (काकः) कति-मात्रं ध्वनिं करोति?", "qEn": "How many मात्रा does the crow's call take?", "a": "वायसः द्वि-मात्रं ध्वनिं करोति (दीर्घ-स्वरः इव)। श्लोके – '...द्विमात्रं त्वेव वायसः।'", "aEn": "The crow makes a two-मात्रा sound, like a long (दीर्घ) vowel."}, {"q": "शिखी (मयूरः) कति-मात्रं ध्वनिं करोति?", "qEn": "How many मात्रा does the peacock's call take?", "a": "शिखी त्रि-मात्रं ध्वनिं करोति (प्लुत-स्वरः इव)। श्लोके – 'शिखी रौति त्रिमात्रं तु...'", "aEn": "The peacock makes a three-मात्रा sound, like a prolated (प्लुत) vowel."}, {"q": "नकुलः कति-मात्रं ध्वनिं करोति?", "qEn": "How many मात्रा does the mongoose's sound take?", "a": "नकुलः अर्ध-मात्रं ध्वनिं करोति (व्यञ्जनम् इव)। श्लोके – '...नकुलस्त्वर्धमात्रकम्॥'", "aEn": "The mongoose makes a half-मात्रा sound, like a consonant."}]}, {"section": "शब्दार्थाः (Vocabulary)", "questions": [{"q": "पित्राज्ञा इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पित्राज्ञा?", "a": "पितुः आदेशः (हिन्दी: पिता का आदेश | English: Father's order)", "aEn": "Father's order"}, {"q": "लाकृतिः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of लाकृतिः?", "a": "'ऌ'-वर्णस्य आकृतिः (हिन्दी: 'ऌ'-वर्ण का रूप | English: Shape of letter 'ऌ')", "aEn": "Shape of the letter 'ऌ'"}, {"q": "एकैकः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of एकैकः?", "a": "प्रत्येकम् (हिन्दी: हर एक | English: Each one)", "aEn": "Each one"}, {"q": "अजः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of अजः?", "a": "छागः (हिन्दी: बकरा | English: Goat)", "aEn": "Goat"}, {"q": "वधूः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of वधूः?", "a": "परिणीता (हिन्दी: विवाहिता नारी | English: Married woman)", "aEn": "Married woman"}, {"q": "मातॄणम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातॄणम्?", "a": "मातुः ऋणम् (हिन्दी: माता का ऋण | English: Indebtedness to Mother)", "aEn": "Indebtedness to Mother"}, {"q": "कॢप्तम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of कॢप्तम्?", "a": "कल्पितम् (हिन्दी: माना हुआ | English: Supposed)", "aEn": "Supposed"}, {"q": "ऌकारः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of ऌकारः?", "a": "'ऌ'-वर्णः (हिन्दी: 'ऌ' वर्ण | English: Letter 'ऌ')", "aEn": "The letter 'ऌ'"}, {"q": "ओम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of ओम्?", "a": "प्रणवः (हिन्दी: एकाक्षर ब्रह्म | English: Name of Brahma)", "aEn": "Name of Brahma (the one-syllable sacred sound)"}, {"q": "औषधम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of औषधम्?", "a": "भेषजम् (हिन्दी: औषध | English: Medicine)", "aEn": "Medicine"}, {"q": "जिह्वा इत्यस्य अर्थः कः?", "qEn": "What is the meaning of जिह्वा?", "a": "रसना (हिन्दी: जीभ | English: Tongue)", "aEn": "Tongue"}, {"q": "नामधेयम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of नामधेयम्?", "a": "नाम (हिन्दी: नाम | English: Name)", "aEn": "Name"}, {"q": "भगिनी इत्यस्य अर्थः कः?", "qEn": "What is the meaning of भगिनी?", "a": "स्वसा (हिन्दी: बहन | English: Sister)", "aEn": "Sister"}, {"q": "भ्राता इत्यस्य अर्थः कः?", "qEn": "What is the meaning of भ्राता?", "a": "अनुजः/अग्रजः (हिन्दी: भाई | English: Brother)", "aEn": "Brother"}, {"q": "पितामही इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पितामही?", "a": "पितुः माता (हिन्दी: दादी | English: Paternal Grandmother)", "aEn": "Paternal Grandmother"}, {"q": "पितामहः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पितामहः?", "a": "पितुः पिता (हिन्दी: दादा | English: Paternal Grandfather)", "aEn": "Paternal Grandfather"}, {"q": "मातामही इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातामही?", "a": "मातुः माता (हिन्दी: नानी | English: Maternal Grandmother)", "aEn": "Maternal Grandmother"}, {"q": "मातामहः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातामहः?", "a": "मातुः पिता (हिन्दी: नाना | English: Maternal Grandfather)", "aEn": "Maternal Grandfather"}, {"q": "सुश्रीः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of सुश्रीः?", "a": "कुमारी (हिन्दी: कुमारी | English: Miss)", "aEn": "Miss"}, {"q": "श्रीः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of श्रीः?", "a": "लक्ष्मीः, सुन्दरता (हिन्दी: लक्ष्मी, सौन्दर्य | English: Goddess of prosperity)", "aEn": "Goddess of prosperity / beauty"}, {"q": "उपाधिः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of उपाधिः?", "a": "विशिष्टता (हिन्दी: विशेषता | English: Title)", "aEn": "Title"}, {"q": "प्रथम-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of प्रथम-नाम?", "a": "मुख्यं नाम (हिन्दी: पहला नाम | English: First Name)", "aEn": "First Name"}, {"q": "मध्य-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मध्य-नाम?", "a": "मध्यवर्ति-नाम (हिन्दी: बीच का नाम | English: Middle Name)", "aEn": "Middle Name"}, {"q": "अन्त्य-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of अन्त्य-नाम?", "a": "अन्तिम-नाम (हिन्दी: अन्तिम-नाम | English: Last Name)", "aEn": "Last Name"}, {"q": "कुल-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of कुल-नाम?", "a": "कुलस्य/गोत्रस्य/वंशस्य वा नाम (हिन्दी: कुल, गोत्र या वंश का नाम | English: Family Name)", "aEn": "Family Name"}]}];
+
+// sectionIdx-qIdx → images to show
+// Sections: 0=Ex1.1, 1=Ex1.2, 2=Ex1.3, 3=Ex1.4, 4=Ex1.5, 5=Ex1.6
+const IMAGE_MAP = {};
+
+function setImgs(containerId, files) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = '';
+  if (!files || !files.length) return;
+  files.forEach(f => {
+    const img = document.createElement('img');
+    img.src = 'images/sanskrit1/' + f;
+    img.alt = '';
+    el.appendChild(img);
+  });
+}
+
+let sectionIdx = 0;
+let qIdx = 0;
+
+function init() {
+  const bar = document.getElementById('section-bar');
+  DATA.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'sec-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = s.section;
+    btn.onclick = () => goSection(i);
+    bar.appendChild(btn);
+  });
+  render();
+}
+
+function goSection(i) {
+  sectionIdx = i;
+  qIdx = 0;
+  document.querySelectorAll('.sec-btn').forEach((b, idx) => {
+    b.classList.toggle('active', idx === i);
+  });
+  render();
+}
+
+function render() {
+  const section = DATA[sectionIdx];
+  const total = section.questions.length;
+  const done = qIdx >= total;
+
+  document.getElementById('main-card').style.display = done ? 'none' : 'block';
+  document.getElementById('done-card').classList.toggle('visible', done);
+  document.getElementById('nav-row') && null;
+
+  if (!done) {
+    const q = section.questions[qIdx];
+    document.getElementById('q-label').textContent = `Question ${qIdx + 1} of ${total}`;
+    document.getElementById('q-count').textContent = section.section;
+    document.getElementById('q-text').textContent = q.q;
+    document.getElementById('q-text-en').textContent = q.qEn || '';
+    document.getElementById('a-text').textContent = q.a;
+    document.getElementById('a-text-en').textContent = q.aEn || '';
+    document.getElementById('answer-box').classList.remove('visible');
+    document.getElementById('show-btn').style.display = 'block';
+
+    const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+    setImgs('q-imgs', imgs.qimg ? [imgs.qimg] : []);
+    setImgs('a-imgs', []);
+
+    const fill = ((qIdx) / total) * 100;
+    document.getElementById('progress-fill').style.width = fill + '%';
+  }
+
+  document.getElementById('prev-btn').disabled = (qIdx === 0);
+  document.getElementById('next-btn').disabled = done;
+}
+
+function showAnswer() {
+  document.getElementById('answer-box').classList.add('visible');
+  document.getElementById('show-btn').style.display = 'none';
+  const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+  setImgs('a-imgs', imgs.aimg || []);
+}
+
+function nextQ() {
+  const total = DATA[sectionIdx].questions.length;
+  if (qIdx < total) {
+    qIdx++;
+    render();
+    if (qIdx === total) {
+      document.getElementById('progress-fill').style.width = '100%';
+    }
+  }
+}
+
+function prevQ() {
+  if (qIdx > 0) { qIdx--; render(); }
+}
+
+function restart() {
+  qIdx = 0;
+  render();
+}
+
+init();
+</script>
+</body>
+</html>

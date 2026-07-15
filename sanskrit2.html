@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 2: संयुक्त-व्यञ्जनानि — Sanskrit Buddy</title>
+  <meta name="description" content="Practice questions and answers for Class 6 Sanskrit Chapter 2: संयुक्त-व्यञ्जनानि (Conjunct Consonants) — NCERT Deepakam"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nirmala UI', 'Noto Sans Devanagari', 'Segoe UI', Tahoma, sans-serif;
+      background: #f0f4ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 16px 20px 12px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p  { font-size: 0.8rem; opacity: 0.85; margin-top: 3px; }
+
+    .section-bar {
+      width: 100%;
+      max-width: 720px;
+      padding: 12px 16px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      -webkit-overflow-scrolling: touch;
+    }
+    .section-bar::-webkit-scrollbar { height: 4px; }
+    .section-bar::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 4px; }
+
+    .sec-btn {
+      white-space: nowrap;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 2px solid #e0e0e0;
+      background: white;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #666;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .sec-btn.active {
+      background: #4f46e5;
+      border-color: #4f46e5;
+      color: white;
+    }
+    .sec-btn:hover:not(.active) { border-color: #4f46e5; color: #4f46e5; }
+
+    .main {
+      width: 100%;
+      max-width: 720px;
+      padding: 20px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .progress-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      border-radius: 10px;
+      transition: width 0.4s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(79,70,229,0.08);
+      overflow: hidden;
+    }
+
+    .card-question {
+      padding: 24px 22px;
+      border-left: 5px solid #4f46e5;
+    }
+    .card-question .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #4f46e5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .card-question p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #1f2937;
+      white-space: pre-wrap;
+    }
+
+    .en-translation {
+      font-size: 0.82rem;
+      color: #6b7280;
+      font-style: italic;
+      margin-top: 10px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .card-imgs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .card-imgs img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #fafafa;
+    }
+
+    .show-btn {
+      width: 100%;
+      padding: 14px;
+      background: #f5f3ff;
+      border: none;
+      border-top: 1px solid #ede9fe;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4f46e5;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .show-btn:hover { background: #ede9fe; }
+
+    .card-answer {
+      padding: 22px;
+      background: #f8fff8;
+      border-top: 1px solid #d1fae5;
+      display: none;
+    }
+    .card-answer.visible { display: block; }
+    .card-answer .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #059669;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .card-answer p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #1f2937;
+      white-space: pre-wrap;
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+    }
+
+    .nav-btn {
+      flex: 1;
+      padding: 13px;
+      border-radius: 12px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-btn.prev {
+      background: white;
+      color: #4f46e5;
+      border: 2px solid #4f46e5;
+    }
+    .nav-btn.prev:hover { background: #f5f3ff; }
+    .nav-btn.next {
+      background: #4f46e5;
+      color: white;
+    }
+    .nav-btn.next:hover { background: #4338ca; }
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .done-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(79,70,229,0.08);
+      display: none;
+    }
+    .done-card.visible { display: block; }
+    .done-card .emoji { font-size: 3rem; margin-bottom: 14px; }
+    .done-card h2 { font-size: 1.2rem; color: #1f2937; margin-bottom: 8px; }
+    .done-card p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+    .done-card button {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header style="position:relative;">
+  <a href="sanskrit_index.html" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.82rem;font-weight:600;">← Chapters</a>
+  <h1>🕉️ Sanskrit Buddy</h1>
+  <p>Class 6 · अध्यायः 2: संयुक्त-व्यञ्जनानि (Conjunct Consonants)</p>
+</header>
+
+<div class="section-bar" id="section-bar"></div>
+
+<div class="main">
+  <div class="progress-row">
+    <span id="q-label">Question 1</span>
+    <span id="q-count"></span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill"></div>
+  </div>
+
+  <div class="card" id="main-card">
+    <div class="card-question">
+      <div class="label">Question</div>
+      <p id="q-text"></p>
+      <p class="en-translation" id="q-text-en"></p>
+      <div class="card-imgs" id="q-imgs"></div>
+    </div>
+    <button class="show-btn" id="show-btn" onclick="showAnswer()">👁 Show Answer</button>
+    <div class="card-answer" id="answer-box">
+      <div class="label">Answer</div>
+      <p id="a-text"></p>
+      <p class="en-translation" id="a-text-en"></p>
+      <div class="card-imgs" id="a-imgs"></div>
+    </div>
+  </div>
+
+  <div class="done-card" id="done-card">
+    <div class="emoji">🎉</div>
+    <h2>Section Complete!</h2>
+    <p>You've gone through all questions in this section. Well done!</p>
+    <button onclick="restart()">🔁 Start Again</button>
+  </div>
+
+  <div class="nav-row">
+    <button class="nav-btn prev" id="prev-btn" onclick="prevQ()">← Previous</button>
+    <button class="nav-btn next" id="next-btn" onclick="nextQ()">Next →</button>
+  </div>
+</div>
+
+<script>
+const DATA = [{"section": "संयुक्त-व्यञ्जनानि – परिचयः", "questions": [{"q": "संयुक्त-व्यञ्जनानि कथं भवन्ति?", "a": "द्वयोः बहूनां वा व्यञ्जन-वर्णानां मेलनेन संयुक्त-व्यञ्जनानि भवन्ति। एतानि नवीनाः वर्णाः न सन्ति, अपितु पृथक्-पृथक् संयुक्त-व्यञ्जन-वर्णानां विशिष्टा लेखन-शैली एव। एतैः सह आगतः स्वरः संयुक्त-व्यञ्जनेषु अन्तर्भूतः नास्ति।", "qEn": "How are conjunct consonants formed?", "aEn": "Conjunct consonants are formed by joining two or more consonant letters together. They are not new letters — just a special way of writing separate consonants combined. The vowel that follows is not merged inside the conjunct itself."}, {"q": "क्ष इति संयुक्त-व्यञ्जनं कथं बनति? उदाहरणेन स्पष्टीकुर्वन्तु (कक्षा)।", "a": "क्ष = क् + ष् + अ\nकक्षा = क् + अ + क् + ष् + आ", "qEn": "How is the conjunct 'क्ष' formed? Explain with the example कक्षा.", "aEn": "क्ष = क् + ष् + अ\nकक्षा (class/classroom) = क् + अ + क् + ष् + आ"}, {"q": "त्र इति संयुक्त-व्यञ्जनं कथं बनति? उदाहरणेन स्पष्टीकुर्वन्तु (पत्रम्)।", "a": "त्र = त् + र् + अ\nपत्रम् = प् + अ + त् + र् + अ + म्", "qEn": "How is the conjunct 'त्र' formed? Explain with the example पत्रम्.", "aEn": "त्र = त् + र् + अ\nपत्रम् (letter/leaf) = प् + अ + त् + र् + अ + म्"}, {"q": "ज्ञ इति संयुक्त-व्यञ्जनं कथं बनति? उदाहरणेन स्पष्टीकुर्वन्तु (ज्ञानम्)।", "a": "ज्ञ = ज् + ञ् + अ\nज्ञानम् = ज् + ञ् + आ + न् + अ + म्", "qEn": "How is the conjunct 'ज्ञ' formed? Explain with the example ज्ञानम्.", "aEn": "ज्ञ = ज् + ञ् + अ\nज्ञानम् (knowledge) = ज् + ञ् + आ + न् + अ + म्"}, {"q": "द्य इति संयुक्त-व्यञ्जनं कथं बनति? उदाहरणेन स्पष्टीकुर्वन्तु (विद्या)।", "a": "द्य = द् + य् + अ\nविद्या = व् + इ + द् + य् + आ", "qEn": "How is the conjunct 'द्य' formed? Explain with the example विद्या.", "aEn": "द्य = द् + य् + अ\nविद्या (knowledge/learning) = व् + इ + द् + य् + आ"}, {"q": "किमर्थं संयुक्त-व्यञ्जनानि 'नवीनाः वर्णाः' न कथ्यन्ते?", "a": "कारणं यत् एतानि केवलं पूर्व-विद्यमानानां पृथक्-पृथक् व्यञ्जन-वर्णानां विशिष्टा लेखन-शैली (writing style) एव सन्ति — नवीनाः, स्वतन्त्राः वर्णाः न सन्ति। यथा क्ष = क्+ष् (के+ष् एव, न तु कश्चन नूतनः वर्णः)।", "qEn": "Why are conjunct consonants not called 'new letters'?", "aEn": "Because they are just a special writing style of pre-existing, separate consonants — not new, independent letters. E.g. क्ष = क्+ष् (simply क् and ष् together, not a brand-new letter)."}, {"q": "चाणक्यः, क्रमः, पद्मम्, अर्णवः, मन्त्रः, इन्द्रः, ओष्ठ्यः, उष्ट्रः, सन्ध्या – एतेषु शब्देषु के के संयुक्त-व्यञ्जनाः सन्ति?", "a": "चाणक्यः → क्य\nक्रमः → क्र\nपद्मम् → द्म\nअर्णवः → र्ण\nमन्त्रः → न्त्र\nइन्द्रः → न्द्र\nओष्ठ्यः → ष्ठ्य\nउष्ट्रः → ष्ट्र\nसन्ध्या → न्ध्य", "qEn": "In the words चाणक्यः (Chanakya), क्रमः (sequence), पद्मम् (lotus), अर्णवः (ocean), मन्त्रः (mantra), इन्द्रः (Indra), ओष्ठ्यः (labial), उष्ट्रः (camel), सन्ध्या (evening/twilight) — which conjunct consonant is in each?", "aEn": "चाणक्यः → क्य\nक्रमः → क्र\nपद्मम् → द्म\nअर्णवः → र्ण\nमन्त्रः → न्त्र\nइन्द्रः → न्द्र\nओष्ठ्यः → ष्ठ्य\nउष्ट्रः → ष्ट्र\nसन्ध्या → न्ध्य"}]}, {"section": "वर्ण-वियोगः (शब्दान् वर्णेषु विभजन्तु)", "questions": [{"q": "अजः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "अजः = अ + ज् + अ + ः", "qEn": "Break 'अजः' (= goat) into its constituent letters.", "aEn": "Letters: अ + ज् + अ + ः"}, {"q": "रामः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "रामः = र् + आ + म् + अ + ः", "qEn": "Break 'रामः' (= Rama (name)) into its constituent letters.", "aEn": "Letters: र् + आ + म् + अ + ः"}, {"q": "हरिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "हरिः = ह् + अ + र् + इ + ः", "qEn": "Break 'हरिः' (= Hari/Vishnu (name)) into its constituent letters.", "aEn": "Letters: ह् + अ + र् + इ + ः"}, {"q": "सीता इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सीता = स् + ई + त् + आ", "qEn": "Break 'सीता' (= Sita (name)) into its constituent letters.", "aEn": "Letters: स् + ई + त् + आ"}, {"q": "गुरुः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "गुरुः = ग् + उ + र् + उ + ः", "qEn": "Break 'गुरुः' (= teacher) into its constituent letters.", "aEn": "Letters: ग् + उ + र् + उ + ः"}, {"q": "वधूः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "वधूः = व् + अ + ध् + ऊ + ः", "qEn": "Break 'वधूः' (= bride) into its constituent letters.", "aEn": "Letters: व् + अ + ध् + ऊ + ः"}, {"q": "ऋषिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ऋषिः = ऋ + ष् + इ + ः", "qEn": "Break 'ऋषिः' (= sage) into its constituent letters.", "aEn": "Letters: ऋ + ष् + इ + ः"}, {"q": "मातॄणम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "मातॄणम् = म् + आ + त् + ॠ + ण् + अ + म्", "qEn": "Break 'मातॄणम्' (= of mothers) into its constituent letters.", "aEn": "Letters: म् + आ + त् + ॠ + ण् + अ + म्"}, {"q": "कॢप्तम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "कॢप्तम् = क् + ऌ + प् + त् + अ + म्", "qEn": "Break 'कॢप्तम्' (= supposed) into its constituent letters.", "aEn": "Letters: क् + ऌ + प् + त् + अ + म्"}, {"q": "देवाः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "देवाः = द् + ए + व् + आ + ः", "qEn": "Break 'देवाः' (= gods) into its constituent letters.", "aEn": "Letters: द् + ए + व् + आ + ः"}, {"q": "एकैकः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "एकैकः = ए + क् + ऐ + क् + अ + ः", "qEn": "Break 'एकैकः' (= each one) into its constituent letters.", "aEn": "Letters: ए + क् + ऐ + क् + अ + ः"}, {"q": "ओम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ओम् = ओ + म्", "qEn": "Break 'ओम्' (= the sacred syllable Om) into its constituent letters.", "aEn": "Letters: ओ + म्"}, {"q": "औषधम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "औषधम् = औ + ष् + अ + ध् + अ + म्", "qEn": "Break 'औषधम्' (= medicine) into its constituent letters.", "aEn": "Letters: औ + ष् + अ + ध् + अ + म्"}, {"q": "वाक्यम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "वाक्यम् = व् + आ + क् + य् + अ + म्", "qEn": "Break 'वाक्यम्' (= sentence) into its constituent letters.", "aEn": "Letters: व् + आ + क् + य् + अ + म्"}, {"q": "मूर्धन्यः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "मूर्धन्यः = म् + ऊ + र् + ध् + अ + न् + य् + अ + ः", "qEn": "Break 'मूर्धन्यः' (= cerebral (sound)) into its constituent letters.", "aEn": "Letters: म् + ऊ + र् + ध् + अ + न् + य् + अ + ः"}, {"q": "तालव्यः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "तालव्यः = त् + आ + ल् + अ + व् + य् + अ + ः", "qEn": "Break 'तालव्यः' (= palatal (sound)) into its constituent letters.", "aEn": "Letters: त् + आ + ल् + अ + व् + य् + अ + ः"}, {"q": "बाह्यम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "बाह्यम् = ब् + आ + ह् + य् + अ + म्", "qEn": "Break 'बाह्यम्' (= external) into its constituent letters.", "aEn": "Letters: ब् + आ + ह् + य् + अ + म्"}, {"q": "क्रीडा इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "क्रीडा = क् + र् + ई + ड् + आ", "qEn": "Break 'क्रीडा' (= play/game) into its constituent letters.", "aEn": "Letters: क् + र् + ई + ड् + आ"}, {"q": "ग्रहणम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ग्रहणम् = ग् + र् + अ + ह् + अ + ण् + अ + म्", "qEn": "Break 'ग्रहणम्' (= taking/holding) into its constituent letters.", "aEn": "Letters: ग् + र् + अ + ह् + अ + ण् + अ + म्"}, {"q": "वज्रः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "वज्रः = व् + अ + ज् + र् + अ + ः", "qEn": "Break 'वज्रः' (= thunderbolt/diamond) into its constituent letters.", "aEn": "Letters: व् + अ + ज् + र् + अ + ः"}, {"q": "द्रष्टा इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "द्रष्टा = द् + र् + अ + ष् + ट् + आ", "qEn": "Break 'द्रष्टा' (= seer/spectator) into its constituent letters.", "aEn": "Letters: द् + र् + अ + ष् + ट् + आ"}, {"q": "प्रगतिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "प्रगतिः = प् + र् + अ + ग् + अ + त् + इ + ः", "qEn": "Break 'प्रगतिः' (= progress) into its constituent letters.", "aEn": "Letters: प् + र् + अ + ग् + अ + त् + इ + ः"}, {"q": "ब्रह्म इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ब्रह्म = ब् + र् + अ + ह् + म् + अ", "qEn": "Break 'ब्रह्म' (= the Supreme Being) into its constituent letters.", "aEn": "Letters: ब् + र् + अ + ह् + म् + अ"}, {"q": "ब्रह्मचारी इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ब्रह्मचारी = ब् + र् + अ + ह् + म् + अ + च् + आ + र् + ई", "qEn": "Break 'ब्रह्मचारी' (= celibate student) into its constituent letters.", "aEn": "Letters: ब् + र् + अ + ह् + म् + अ + च् + आ + र् + ई"}, {"q": "जाह्नवी इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "जाह्नवी = ज् + आ + ह् + न् + अ + व् + ई", "qEn": "Break 'जाह्नवी' (= the river Ganga) into its constituent letters.", "aEn": "Letters: ज् + आ + ह् + न् + अ + व् + ई"}, {"q": "ध्वनिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ध्वनिः = ध् + व् + अ + न् + इ + ः", "qEn": "Break 'ध्वनिः' (= sound) into its constituent letters.", "aEn": "Letters: ध् + व् + अ + न् + इ + ः"}, {"q": "सरस्वती इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सरस्वती = स् + अ + र् + अ + स् + व् + अ + त् + ई", "qEn": "Break 'सरस्वती' (= Saraswati (goddess)) into its constituent letters.", "aEn": "Letters: स् + अ + र् + अ + स् + व् + अ + त् + ई"}, {"q": "वर्णः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "वर्णः = व् + अ + र् + ण् + अ + ः", "qEn": "Break 'वर्णः' (= letter) into its constituent letters.", "aEn": "Letters: व् + अ + र् + ण् + अ + ः"}, {"q": "कर्म इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "कर्म = क् + अ + र् + म् + अ", "qEn": "Break 'कर्म' (= action/deed) into its constituent letters.", "aEn": "Letters: क् + अ + र् + म् + अ"}, {"q": "सप्तर्षिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सप्तर्षिः = स् + अ + प् + त् + अ + र् + ष् + इ + ः", "qEn": "Break 'सप्तर्षिः' (= the Seven Sages) into its constituent letters.", "aEn": "Letters: स् + अ + प् + त् + अ + र् + ष् + इ + ः"}, {"q": "ढक्का इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "ढक्का = ढ् + अ + क् + क् + आ", "qEn": "Break 'ढक्का' (= drum) into its constituent letters.", "aEn": "Letters: ढ् + अ + क् + क् + आ"}, {"q": "वित्तम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "वित्तम् = व् + इ + त् + त् + अ + म्", "qEn": "Break 'वित्तम्' (= wealth) into its constituent letters.", "aEn": "Letters: व् + इ + त् + त् + अ + म्"}, {"q": "सिद्धार्थः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सिद्धार्थः = स् + इ + द् + ध् + आ + र् + थ् + अ + ः", "qEn": "Break 'सिद्धार्थः' (= Siddhartha (name)) into its constituent letters.", "aEn": "Letters: स् + इ + द् + ध् + आ + र् + थ् + अ + ः"}, {"q": "पद्मम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "पद्मम् = प् + अ + द् + म् + अ + म्", "qEn": "Break 'पद्मम्' (= lotus) into its constituent letters.", "aEn": "Letters: प् + अ + द् + म् + अ + म्"}, {"q": "शब्दः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "शब्दः = श् + अ + ब् + द् + अ + ः", "qEn": "Break 'शब्दः' (= word/sound) into its constituent letters.", "aEn": "Letters: श् + अ + ब् + द् + अ + ः"}, {"q": "पङ्कजम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "पङ्कजम् = प् + अ + ङ् + क् + अ + ज् + अ + म्", "qEn": "Break 'पङ्कजम्' (= lotus) into its constituent letters.", "aEn": "Letters: प् + अ + ङ् + क् + अ + ज् + अ + म्"}, {"q": "व्यञ्जनम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "व्यञ्जनम् = व् + य् + अ + ञ् + ज् + अ + न् + अ + म्", "qEn": "Break 'व्यञ्जनम्' (= consonant) into its constituent letters.", "aEn": "Letters: व् + य् + अ + ञ् + ज् + अ + न् + अ + म्"}, {"q": "कण्ठः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "कण्ठः = क् + अ + ण् + ठ् + अ + ः", "qEn": "Break 'कण्ठः' (= throat) into its constituent letters.", "aEn": "Letters: क् + अ + ण् + ठ् + अ + ः"}, {"q": "सन्धिः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सन्धिः = स् + अ + न् + ध् + इ + ः", "qEn": "Break 'सन्धिः' (= joining (of letters)) into its constituent letters.", "aEn": "Letters: स् + अ + न् + ध् + इ + ः"}, {"q": "प्रारम्भः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "प्रारम्भः = प् + र् + आ + र् + अ + म् + भ् + अ + ः", "qEn": "Break 'प्रारम्भः' (= beginning) into its constituent letters.", "aEn": "Letters: प् + र् + आ + र् + अ + म् + भ् + अ + ः"}, {"q": "सँस्कर्ता इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "सँस्कर्ता = स् + अँ + स् + क् + अ + र् + त् + आ", "qEn": "Break 'सँस्कर्ता' (= one who performs a rite) into its constituent letters.", "aEn": "Letters: स् + अँ + स् + क् + अ + र् + त् + आ"}, {"q": "कस्मिँश्चिद् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "कस्मिँश्चिद् = क् + अ + स् + म् + इँ + श् + च् + इ + द्", "qEn": "Break 'कस्मिँश्चिद्' (= in some/somewhere) into its constituent letters.", "aEn": "Letters: क् + अ + स् + म् + इँ + श् + च् + इ + द्"}, {"q": "संयमः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "संयमः = स् + अ + ं + य् + अ + म् + अ + ः", "qEn": "Break 'संयमः' (= self-control) into its constituent letters.", "aEn": "Letters: स् + अ + ं + य् + अ + म् + अ + ः"}, {"q": "संवादः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "संवादः = स् + अ + ं + व् + आ + द् + अ + ः", "qEn": "Break 'संवादः' (= dialogue) into its constituent letters.", "aEn": "Letters: स् + अ + ं + व् + आ + द् + अ + ः"}, {"q": "हंसः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "हंसः = ह् + अ + ं + स् + अ + ः", "qEn": "Break 'हंसः' (= swan) into its constituent letters.", "aEn": "Letters: ह् + अ + ं + स् + अ + ः"}, {"q": "दुःखम् इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "दुःखम् = द् + उ + ः + ख् + अ + म्", "qEn": "Break 'दुःखम्' (= sorrow) into its constituent letters.", "aEn": "Letters: द् + उ + ः + ख् + अ + म्"}, {"q": "प्रातःकालः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "प्रातःकालः = प् + र् + आ + त् + अ + ः + क् + आ + ल् + अ + ः", "qEn": "Break 'प्रातःकालः' (= morning) into its constituent letters.", "aEn": "Letters: प् + र् + आ + त् + अ + ः + क् + आ + ल् + अ + ः"}, {"q": "इन्द्रः इत्यस्य वर्ण-वियोगः कुर्वन्तु।", "a": "इन्द्रः = इ + न् + द् + र् + अ + ः", "qEn": "Break 'इन्द्रः' (= Indra (king of gods)) into its constituent letters.", "aEn": "Letters: इ + न् + द् + र् + अ + ः"}]}, {"section": "वर्ण-संयोगः (वर्णेभ्यः शब्दं रचयन्तु)", "questions": [{"q": "द्+आ+श्+अ+र्+अ+थ्+इ+ः → कः शब्दः बनति?", "a": "दाशरथिः", "qEn": "Which word do these letters spell?", "aEn": "दाशरथिः (= son of Dasharatha (Rama))"}, {"q": "ह्+इ+म्+आ+ल्+अ+य्+अ+ः → कः शब्दः बनति?", "a": "हिमालयः", "qEn": "Which word do these letters spell?", "aEn": "हिमालयः (= the Himalayas)"}, {"q": "क्+ऋ+ष्+ण्+अ+ः → कः शब्दः बनति?", "a": "कृष्णः", "qEn": "Which word do these letters spell?", "aEn": "कृष्णः (= Krishna (name))"}, {"q": "न्+अ+र्+ए+न्+द्+र्+अ+ः → कः शब्दः बनति?", "a": "नरेन्द्रः", "qEn": "Which word do these letters spell?", "aEn": "नरेन्द्रः (= king)"}, {"q": "म्+अ+ञ्+ज्+उ+ल्+अ+ः → कः शब्दः बनति?", "a": "मञ्जुलः", "qEn": "Which word do these letters spell?", "aEn": "मञ्जुलः (= lovely)"}, {"q": "प्+उ+ष्+क्+अ+र्+अ+ः → कः शब्दः बनति?", "a": "पुष्करः", "qEn": "Which word do these letters spell?", "aEn": "पुष्करः (= lotus)"}, {"q": "क्+उ+क्+क्+उ+ट्+अ+ः → कः शब्दः बनति?", "a": "कुक्कुटः", "qEn": "Which word do these letters spell?", "aEn": "कुक्कुटः (= rooster)"}, {"q": "स्+व्+अ+स्+त्+इ+क्+अ+ः → कः शब्दः बनति?", "a": "स्वस्तिकः", "qEn": "Which word do these letters spell?", "aEn": "स्वस्तिकः (= auspicious symbol)"}, {"q": "श्+इ+क्+ष्+अ+क्+अ+ः → कः शब्दः बनति?", "a": "शिक्षकः", "qEn": "Which word do these letters spell?", "aEn": "शिक्षकः (= teacher)"}, {"q": "स्+अ+ङ्+ग्+अ+ण्+अ+क्+अ+म् → कः शब्दः बनति?", "a": "सङ्गणकम्", "qEn": "Which word do these letters spell?", "aEn": "सङ्गणकम् (= computer)"}, {"q": "क्+अ+न्+द्+उ+क्+अ+ः → कः शब्दः बनति?", "a": "कन्दुकः", "qEn": "Which word do these letters spell?", "aEn": "कन्दुकः (= ball)"}, {"q": "म्+अ+न्+त्+र्+ई → कः शब्दः बनति?", "a": "मन्त्री", "qEn": "Which word do these letters spell?", "aEn": "मन्त्री (= minister)"}, {"q": "र्+आ+ष्+ट्+र्+अ+म् → कः शब्दः बनति?", "a": "राष्ट्रम्", "qEn": "Which word do these letters spell?", "aEn": "राष्ट्रम् (= nation)"}, {"q": "क्+अ+ण्+ठ्+य्+अ+ः → कः शब्दः बनति?", "a": "कण्ठ्यः", "qEn": "Which word do these letters spell?", "aEn": "कण्ठ्यः (= guttural (sound))"}, {"q": "द्+अ+न्+त्+य्+अ+ः → कः शब्दः बनति?", "a": "दन्त्यः", "qEn": "Which word do these letters spell?", "aEn": "दन्त्यः (= dental (sound))"}, {"q": "म्+अ+त्+स्+य्+अ+ः → कः शब्दः बनति?", "a": "मत्स्यः", "qEn": "Which word do these letters spell?", "aEn": "मत्स्यः (= fish)"}, {"q": "ओ+ष्+ठ्+य्+अ+ः → कः शब्दः बनति?", "a": "ओष्ठ्यः", "qEn": "Which word do these letters spell?", "aEn": "ओष्ठ्यः (= labial (sound))"}, {"q": "स्+अ+न्+ध्+य्+अ+क्+ष्+अ+र्+अ+म् → कः शब्दः बनति?", "a": "सन्ध्यक्षरम्", "qEn": "Which word do these letters spell?", "aEn": "सन्ध्यक्षरम् (= compound-vowel letter)"}, {"q": "स्+अ+ं+स्+क्+ऋ+त्+अ+म् → कः शब्दः बनति?", "a": "संस्कृतम्", "qEn": "Which word do these letters spell?", "aEn": "संस्कृतम् (= Sanskrit)"}, {"q": "ध्+आ+र्+ष्+ट्+य्+अ+म् → कः शब्दः बनति?", "a": "धार्ष्ट्यम्", "qEn": "Which word do these letters spell?", "aEn": "धार्ष्ट्यम् (= audacity)"}, {"q": "क्+आ+र्+त्+स्+न्+य्+अ+म् → कः शब्दः बनति?", "a": "कार्त्स्न्यम्", "qEn": "Which word do these letters spell?", "aEn": "कार्त्स्न्यम् (= entirety)"}]}, {"section": "शब्दार्थाः (Vocabulary)", "questions": [{"q": "अर्णवः इत्यस्य अर्थः कः?", "a": "समुद्रः (हिन्दी: सागर | English: Sea/Ocean)", "qEn": "What is the meaning of अर्णवः?", "aEn": "Sea/Ocean"}, {"q": "उष्ट्रः इत्यस्य अर्थः कः?", "a": "क्रमेलकः (हिन्दी: ऊँट | English: Camel)", "qEn": "What is the meaning of उष्ट्रः?", "aEn": "Camel"}, {"q": "बाह्यम् इत्यस्य अर्थः कः?", "a": "बहिः स्थितम् (हिन्दी: बाहरी | English: External)", "qEn": "What is the meaning of बाह्यम्?", "aEn": "External"}, {"q": "ग्रहणम् इत्यस्य अर्थः कः?", "a": "स्वीकरणं/धारणम् (हिन्दी: स्वीकार करना / पकड़ना | English: Taking/holding)", "qEn": "What is the meaning of ग्रहणम्?", "aEn": "Taking/holding"}, {"q": "वज्रम् इत्यस्य अर्थः कः?", "a": "इन्द्रस्य आयुधम्/हीरकम् (हिन्दी: इन्द्र का शस्त्र/हीरा | English: Indra's weapon/Diamond)", "qEn": "What is the meaning of वज्रम्?", "aEn": "Indra's weapon/Diamond"}, {"q": "द्रष्टा इत्यस्य अर्थः कः?", "a": "यः पश्यति (हिन्दी: देखने वाला | English: Spectator)", "qEn": "What is the meaning of द्रष्टा?", "aEn": "Spectator"}, {"q": "ब्रह्म इत्यस्य अर्थः कः?", "a": "परमात्मा (हिन्दी: परमेश्वर | English: Ultimate Reality/One Supreme God)", "qEn": "What is the meaning of ब्रह्म?", "aEn": "Ultimate Reality/One Supreme God"}, {"q": "देवाः इत्यस्य अर्थः कः?", "a": "सृष्टेः पूज्याः शक्तयः, विभूतयः च (हिन्दी: संसार की पूजनीय शक्तियाँ एवं विभूतियाँ | English: Divine forces, powers & entities of the Universe)", "qEn": "What is the meaning of देवाः?", "aEn": "Divine forces, powers & entities of the Universe"}, {"q": "ऋषिः इत्यस्य अर्थः कः?", "a": "मन्त्रद्रष्टा (हिन्दी: तपस्वी | English: Sage/Seer)", "qEn": "What is the meaning of ऋषिः?", "aEn": "Sage/Seer"}, {"q": "प्रगतिः इत्यस्य अर्थः कः?", "a": "उन्नतिः (हिन्दी: विकास | English: Development)", "qEn": "What is the meaning of प्रगतिः?", "aEn": "Development"}, {"q": "ब्रह्मचारी इत्यस्य अर्थः कः?", "a": "विद्या-संयम-व्रती (हिन्दी: विद्या व संयम व्रत रखने वाला | English: Celibate)", "qEn": "What is the meaning of ब्रह्मचारी?", "aEn": "Celibate"}, {"q": "जाह्नवी इत्यस्य अर्थः कः?", "a": "जह्नोः ऋषेः पुत्री – गङ्गा (हिन्दी: जह्नु ऋषि की पुत्री – गंगा | English: Rishi Jahnu's daughter – Ganga)", "qEn": "What is the meaning of जाह्नवी?", "aEn": "Rishi Jahnu's daughter – Ganga"}, {"q": "सप्तर्षिः इत्यस्य अर्थः कः?", "a": "सप्तानाम् ऋषीणां समूहः (हिन्दी: सात महान् ऋषियों का समूह | English: Group of Seven Great Sages)", "qEn": "What is the meaning of सप्तर्षिः?", "aEn": "Group of Seven Great Sages"}, {"q": "ढक्का इत्यस्य अर्थः कः?", "a": "डमरुः (हिन्दी: ढोल, डंका, नगाड़ा | English: Drum)", "qEn": "What is the meaning of ढक्का?", "aEn": "Drum"}, {"q": "वित्तम् इत्यस्य अर्थः कः?", "a": "धनम् (हिन्दी: धन/पैसे | English: Money/prosperity)", "qEn": "What is the meaning of वित्तम्?", "aEn": "Money/prosperity"}, {"q": "पङ्कजम् इत्यस्य अर्थः कः?", "a": "पद्मम् (हिन्दी: कमल | English: Lotus)", "qEn": "What is the meaning of पङ्कजम्?", "aEn": "Lotus"}, {"q": "सन्धिः इत्यस्य अर्थः कः?", "a": "द्वयोः वर्णयोः मेलनम् (हिन्दी: दो वर्णों का मेल | English: Joining of two letters)", "qEn": "What is the meaning of सन्धिः?", "aEn": "Joining of two letters"}, {"q": "सँस्कर्ता इत्यस्य अर्थः कः?", "a": "यः संस्कारं करोति (हिन्दी: संस्कार करने वाला | English: Performer of Samskaras)", "qEn": "What is the meaning of सँस्कर्ता?", "aEn": "Performer of Samskaras"}, {"q": "कस्मिँश्चिद् इत्यस्य अर्थः कः?", "a": "कुत्रचिद् (हिन्दी: कहीं पर/किसी में | English: Somewhere)", "qEn": "What is the meaning of कस्मिँश्चिद्?", "aEn": "Somewhere"}, {"q": "संयमः इत्यस्य अर्थः कः?", "a": "आत्मानुशासनम् (हिन्दी: आत्म-नियन्त्रण | English: Self-control)", "qEn": "What is the meaning of संयमः?", "aEn": "Self-control"}, {"q": "संवादः इत्यस्य अर्थः कः?", "a": "परस्पर-सम्भाषणम् (हिन्दी: सौहार्दपूर्ण चर्चा | English: Discussion/interaction)", "qEn": "What is the meaning of संवादः?", "aEn": "Discussion/interaction"}, {"q": "प्रातःकालः इत्यस्य अर्थः कः?", "a": "प्रभात-वेला (हिन्दी: सुबह का समय | English: Morning Time)", "qEn": "What is the meaning of प्रातःकालः?", "aEn": "Morning Time"}, {"q": "राष्ट्रम् इत्यस्य अर्थः कः?", "a": "देशः (हिन्दी: राष्ट्र/देश | English: Nation)", "qEn": "What is the meaning of राष्ट्रम्?", "aEn": "Nation"}, {"q": "मत्स्यः इत्यस्य अर्थः कः?", "a": "मीनः (हिन्दी: मछली | English: Fish)", "qEn": "What is the meaning of मत्स्यः?", "aEn": "Fish"}, {"q": "धार्ष्ट्यम् इत्यस्य अर्थः कः?", "a": "धृष्टता (हिन्दी: ढिठाई | English: Audacity)", "qEn": "What is the meaning of धार्ष्ट्यम्?", "aEn": "Audacity"}, {"q": "कार्त्स्न्यम् इत्यस्य अर्थः कः?", "a": "सम्पूर्णता (हिन्दी: संपूर्णता | English: Entirety)", "qEn": "What is the meaning of कार्त्स्न्यम्?", "aEn": "Entirety"}, {"q": "दाशरथिः इत्यस्य अर्थः कः?", "a": "दशरथस्य पुत्रः (हिन्दी: दशरथ का पुत्र | English: Dasharatha's Son)", "qEn": "What is the meaning of दाशरथिः?", "aEn": "Dasharatha's Son"}, {"q": "नरेन्द्रः इत्यस्य अर्थः कः?", "a": "नृपः/सम्राट् (हिन्दी: राजा/सम्राट् | English: King/Emperor)", "qEn": "What is the meaning of नरेन्द्रः?", "aEn": "King/Emperor"}, {"q": "मञ्जुलः इत्यस्य अर्थः कः?", "a": "सुन्दरः (हिन्दी: रमणीय | English: Lovely/charming)", "qEn": "What is the meaning of मञ्जुलः?", "aEn": "Lovely/charming"}, {"q": "पुष्करम् इत्यस्य अर्थः कः?", "a": "पद्मम् (हिन्दी: कमल | English: Lotus)", "qEn": "What is the meaning of पुष्करम्?", "aEn": "Lotus"}, {"q": "स्वस्तिकः इत्यस्य अर्थः कः?", "a": "मङ्गल-चिह्नम् (हिन्दी: शुभ चिह्न | English: Auspicious symbol)", "qEn": "What is the meaning of स्वस्तिकः?", "aEn": "Auspicious symbol"}, {"q": "सङ्गणकम् इत्यस्य अर्थः कः?", "a": "सङ्गणक-यन्त्रम् (हिन्दी: संगणक | English: Computer)", "qEn": "What is the meaning of सङ्गणकम्?", "aEn": "Computer"}, {"q": "कन्दुकः इत्यस्य अर्थः कः?", "a": "गेन्दुकः (हिन्दी: गेंद | English: Ball)", "qEn": "What is the meaning of कन्दुकः?", "aEn": "Ball"}]}];
+
+// sectionIdx-qIdx → images to show
+// Sections: 0=Ex1.1, 1=Ex1.2, 2=Ex1.3, 3=Ex1.4, 4=Ex1.5, 5=Ex1.6
+const IMAGE_MAP = {};
+
+function setImgs(containerId, files) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = '';
+  if (!files || !files.length) return;
+  files.forEach(f => {
+    const img = document.createElement('img');
+    img.src = 'images/sanskrit2/' + f;
+    img.alt = '';
+    el.appendChild(img);
+  });
+}
+
+let sectionIdx = 0;
+let qIdx = 0;
+
+function init() {
+  const bar = document.getElementById('section-bar');
+  DATA.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'sec-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = s.section;
+    btn.onclick = () => goSection(i);
+    bar.appendChild(btn);
+  });
+  render();
+}
+
+function goSection(i) {
+  sectionIdx = i;
+  qIdx = 0;
+  document.querySelectorAll('.sec-btn').forEach((b, idx) => {
+    b.classList.toggle('active', idx === i);
+  });
+  render();
+}
+
+function render() {
+  const section = DATA[sectionIdx];
+  const total = section.questions.length;
+  const done = qIdx >= total;
+
+  document.getElementById('main-card').style.display = done ? 'none' : 'block';
+  document.getElementById('done-card').classList.toggle('visible', done);
+  document.getElementById('nav-row') && null;
+
+  if (!done) {
+    const q = section.questions[qIdx];
+    document.getElementById('q-label').textContent = `Question ${qIdx + 1} of ${total}`;
+    document.getElementById('q-count').textContent = section.section;
+    document.getElementById('q-text').textContent = q.q;
+    document.getElementById('q-text-en').textContent = q.qEn || '';
+    document.getElementById('a-text').textContent = q.a;
+    document.getElementById('a-text-en').textContent = q.aEn || '';
+    document.getElementById('answer-box').classList.remove('visible');
+    document.getElementById('show-btn').style.display = 'block';
+
+    const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+    setImgs('q-imgs', imgs.qimg ? [imgs.qimg] : []);
+    setImgs('a-imgs', []);
+
+    const fill = ((qIdx) / total) * 100;
+    document.getElementById('progress-fill').style.width = fill + '%';
+  }
+
+  document.getElementById('prev-btn').disabled = (qIdx === 0);
+  document.getElementById('next-btn').disabled = done;
+}
+
+function showAnswer() {
+  document.getElementById('answer-box').classList.add('visible');
+  document.getElementById('show-btn').style.display = 'none';
+  const imgs = IMAGE_MAP[`${sectionIdx}-${qIdx}`] || {};
+  setImgs('a-imgs', imgs.aimg || []);
+}
+
+function nextQ() {
+  const total = DATA[sectionIdx].questions.length;
+  if (qIdx < total) {
+    qIdx++;
+    render();
+    if (qIdx === total) {
+      document.getElementById('progress-fill').style.width = '100%';
+    }
+  }
+}
+
+function prevQ() {
+  if (qIdx > 0) { qIdx--; render(); }
+}
+
+function restart() {
+  qIdx = 0;
+  render();
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+[
+  {
+    "section": "वर्णाः – परिचयः",
+    "questions": [
+      {
+        "q": "वर्णाः कति-विधाः भवन्ति? के?",
+        "qEn": "How many kinds of letters (वर्ण) are there? What are they?",
+        "a": "वर्णाः द्विविधाः भवन्ति – स्वराः (vowels) व्यञ्जनानि (consonants) च।",
+        "aEn": "Letters are of two kinds — स्वराः (vowels) and व्यञ्जनानि (consonants)."
+      },
+      {
+        "q": "स्वराः कति-विधाः? के?",
+        "qEn": "How many kinds of vowels are there? What are they?",
+        "a": "स्वराः द्विविधाः सन्ति –\n1. समानाक्षराणि (simple vowels): अ आ, इ ई, उ ऊ, ऋ ॠ, ऌ (दीर्घः न सन्ति)\n2. सन्ध्यक्षराणि (compound vowels): ए ऐ ओ औ – द्वयोः निश्चित-स्वरयोः सन्धिद्वारा जायन्ते।",
+        "aEn": "Vowels are of two kinds:\n1. समानाक्षराणि (simple vowels): अ आ, इ ई, उ ऊ, ऋ ॠ, ऌ (this last has no long form)\n2. सन्ध्यक्षराणि (compound vowels): ए ऐ ओ औ — formed by joining (sandhi) two fixed vowels."
+      },
+      {
+        "q": "समानाक्षर-स्वराः इति के? उदाहरणानि ददतु।",
+        "qEn": "What are समानाक्षर (simple) vowels? Give examples.",
+        "a": "वर्णमालायाम् आदौ ये सामान्याः स्वराः सन्ति, ते समानाक्षर-स्वराः भवन्ति। यथा – अ, आ, इ, ई, उ, ऊ, ऋ, ॠ, ऌ।",
+        "aEn": "The basic vowels at the start of the alphabet are called समानाक्षर-स्वराः. Examples — अ, आ, इ, ई, उ, ऊ, ऋ, ॠ, ऌ."
+      },
+      {
+        "q": "सन्ध्यक्षर-स्वराः कथं जायन्ते? उदाहरणैः स्पष्टीकुर्वन्तु।",
+        "qEn": "How are सन्ध्यक्षर (compound) vowels formed? Explain with examples.",
+        "a": "द्वयोः निश्चित-स्वरयोः सन्धिद्वारा ये नवीनाः स्वर-वर्णाः जायन्ते, ते सन्ध्यक्षर-स्वराः भवन्ति।\nअ + इ = ए\nअ + ए = ऐ\nअ + उ = ओ\nअ + ओ = औ",
+        "aEn": "New vowel letters formed by joining two fixed vowels are called सन्ध्यक्षर-स्वराः.\nअ + इ = ए\nअ + ए = ऐ\nअ + उ = ओ\nअ + ओ = औ"
+      },
+      {
+        "q": "अनुनासिक-स्वराः इति के?",
+        "qEn": "What are nasalized vowels (अनुनासिक-स्वराः)?",
+        "a": "मुखेन सह नासिकया अपि उच्चारिताः स्वराः अनुनासिक-स्वराः भवन्ति – अँ, आँ, इँ, ईँ, उँ, ऊँ, ऋँ, ॠँ, ऌँ, एँ, ऐँ, ओँ, औँ।",
+        "aEn": "Vowels pronounced through the nose along with the mouth are nasalized vowels — अँ, आँ, इँ, ईँ, उँ, ऊँ, ऋँ, ॠँ, ऌँ, एँ, ऐँ, ओँ, औँ."
+      },
+      {
+        "q": "व्यञ्जनानाम् उच्चारणे कस्य स्वरस्य योजनं भवति? किमर्थम्?",
+        "qEn": "Which vowel is added when pronouncing consonants, and why?",
+        "a": "व्यञ्जनानाम् उच्चारणे कस्यचित् स्वरस्य सहायतायाः अपेक्षा अवश्यं भवति। अतः वर्णमालायां व्यञ्जनानाम् उच्चारणार्थं सर्वत्र 'अ' स्वरस्य योजनं भवति। उदाहरणम् – क् + अ = क, ख् + अ = ख। अत्र व्यञ्जनं केवलं क्, ख् इत्येव अस्ति; 'अ' स्वरः केवलम् उच्चारणार्थं योजितः अस्ति।",
+        "aEn": "A consonant always needs the help of some vowel to be pronounced. So in the alphabet, the vowel 'अ' is added everywhere just to make consonants pronounceable. Example: क्+अ=क, ख्+अ=ख. The actual consonant is only क्, ख् — the 'अ' is added purely for pronunciation."
+      },
+      {
+        "q": "व्यञ्जनानां चत्वारः भेदाः के?",
+        "qEn": "What are the four types of consonants?",
+        "a": "1. स्पर्शाः (वर्ग्याः) वर्णाः – पञ्चसु वर्गेषु विभक्ताः\n2. अन्तःस्थाः वर्णाः – य र ल व\n3. ऊष्म-वर्णाः – श ष स ह\n4. अयोगवाहौ वर्णौ – अं (अनुस्वारः), अः (विसर्गः)",
+        "aEn": "1. स्पर्श (stop) consonants — divided into 5 groups\n2. अन्तःस्थ (semi-vowel) consonants — य र ल व\n3. ऊष्म (sibilant) consonants — श ष स ह\n4. अयोगवाह pair — अं (anusvara), अः (visarga)"
+      },
+      {
+        "q": "स्पर्शाः (वर्ग्याः) वर्णाः पञ्चसु वर्गेषु कथं विभक्ताः? प्रत्येकं वर्गं लिखन्तु।",
+        "qEn": "How are the स्पर्श (stop) consonants divided into five groups? List each group.",
+        "a": "क-वर्गः – क ख ग घ ङ\nच-वर्गः – च छ ज झ ञ\nट-वर्गः – ट ठ ड ढ ण\nत-वर्गः – त थ द ध न\nप-वर्गः – प फ ब भ म\n\nस्पर्शाः (वर्ग्याः) व्यञ्जनवर्णाः स्वकीय-उच्चारण-स्थानानुसारेण एतेषु पञ्चसु वर्गेषु विभक्ताः भवन्ति।",
+        "aEn": "क-group – क ख ग घ ङ\nच-group – च छ ज झ ञ\nट-group – ट ठ ड ढ ण\nत-group – त थ द ध न\nप-group – प फ ब भ म\n\nStop consonants are divided into these five groups by their place of articulation."
+      },
+      {
+        "q": "अन्तःस्थाः वर्णाः इति के? तान् किमर्थं 'अर्ध-स्वराः' अपि वदन्ति?",
+        "qEn": "What are अन्तःस्थ (semi-vowel) letters? Why are they also called 'half-vowels'?",
+        "a": "य र ल व – एते अन्तःस्थाः वर्णाः भवन्ति। अन्तःस्थाः वर्णाः बहुत्र स्वर-वर्णानां स्थाने जायन्ते (यथा इ+अ→य्+अ, ऋ+अ→र्+अ, ऌ+अ→ल्+अ, उ+अ→व्+अ)। अतः एते 'अर्ध-स्वराः' इत्यपि उच्यन्ते।\nउदाहरणानि – यदि+अपि=यद्यपि, पितृ+आज्ञा=पित्राज्ञा, ऌ+आकृतिः=लाकृतिः, सु+आगतम्=स्वागतम्।",
+        "aEn": "य र ल व are the अन्तःस्थ letters. They often appear in place of vowel letters (इ+अ→य्+अ, ऋ+अ→र्+अ, ऌ+अ→ल्+अ, उ+अ→व्+अ), hence called 'half-vowels'.\nExamples — यदि+अपि=यद्यपि (even if), पितृ+आज्ञा=पित्राज्ञा (father's order), ऌ+आकृतिः=लाकृतिः (shape of 'ऌ'), सु+आगतम्=स्वागतम् (welcome)."
+      },
+      {
+        "q": "ऊष्म-वर्णाः इति के? तेषाम् उच्चारण-समये किं भवति?",
+        "qEn": "What are ऊष्म (sibilant) letters? What happens when pronouncing them?",
+        "a": "श ष स ह – एते ऊष्म-वर्णाः भवन्ति। ऊष्मणां व्यञ्जन-वर्णानाम् उच्चारण-समये मुखात् उष्णः वायुः निस्सरति।",
+        "aEn": "श ष स ह are the ऊष्म (sibilant) letters. Hot air is released from the mouth when pronouncing them."
+      },
+      {
+        "q": "अयोगवाहौ वर्णौ के? तयोः उच्चारणे 'अ' स्वरस्य योजनं कदा भवति?",
+        "qEn": "What are the two अयोगवाह letters? When is the vowel 'अ' added while pronouncing them?",
+        "a": "अं (अनुस्वारः) अः (विसर्गः) – एतौ द्वौ अयोगवाहौ स्तः। अत्र उच्चारणार्थं 'अ' स्वरस्य संयोजनं पूर्वं भवति, न तु पश्चात्।\nअं = अ + '॰' (बिन्दुः) → अनुस्वारः\nअः = अ + ':' → विसर्गः",
+        "aEn": "अं (anusvara) and अः (visarga) are the two अयोगवाह letters. Here the vowel 'अ' is added before the mark, not after.\nअं = अ + dot → anusvara\nअः = अ + colon-like mark → visarga"
+      }
+    ]
+  },
+  {
+    "section": "उच्चारण-स्थानानि",
+    "questions": [
+      {
+        "q": "आस्ये (मुखे) वर्णानां कति उच्चारण-स्थानानि सन्ति? कानि?",
+        "qEn": "How many places of articulation are there in the head? What are they?",
+        "a": "आस्ये (Head) सामान्यतः षट् उच्चारण-स्थानानि (Six Places of Articulation) भवन्ति, येषु वर्णानाम् उत्पत्तिः भवति –\n1. कण्ठः (throat)\n2. तालु (palate)\n3. मूर्धा (cerebral region)\n4. दन्तः (teeth)\n5. ओष्ठः (lips)\n6. नासिका (nose)\n\nमुखे (Mouth) पञ्चसु स्थानेषु, नासिकायाम् (Nose) एकस्मिन् स्थाने वर्णानाम् उत्पत्तिः भवति।",
+        "aEn": "There are generally six places of articulation in the head:\n1. कण्ठः (throat)\n2. तालु (palate)\n3. मूर्धा (roof of mouth / cerebral region)\n4. दन्तः (teeth)\n5. ओष्ठः (lips)\n6. नासिका (nose)\n\nFive places are in the mouth, one in the nose."
+      },
+      {
+        "q": "कण्ठ्याः वर्णाः के? (कण्ठस्थाने उच्चारिताः वर्णाः)",
+        "qEn": "Which letters are pronounced at the throat (कण्ठ्य)?",
+        "a": "अ आ, क ख ग घ ङ, ह, अः (विसर्गः) – एतेषाम् उच्चारणं कण्ठ-स्थाने भवति। (पाणिनीय-सूत्रम् – 'अकुहविसर्जनीयाः कण्ठ्याः')",
+        "aEn": "अ आ, क ख ग घ ङ, ह, अः (visarga) are pronounced at the throat. (Panini's sutra: 'अकुहविसर्जनीयाः कण्ठ्याः')"
+      },
+      {
+        "q": "तालव्याः वर्णाः के?",
+        "qEn": "Which letters are palatal (तालव्य)?",
+        "a": "इ ई, च छ ज झ ञ, य, श – एतेषाम् उच्चारणं तालु-स्थाने भवति। (पाणिनीय-सूत्रम् – 'इचुयशास्तालव्याः')",
+        "aEn": "इ ई, च छ ज झ ञ, य, श are pronounced at the palate. (Sutra: 'इचुयशास्तालव्याः')"
+      },
+      {
+        "q": "मूर्धन्याः वर्णाः के?",
+        "qEn": "Which letters are cerebral/retroflex (मूर्धन्य)?",
+        "a": "ऋ ॠ, ट ठ ड ढ ण, र, ष – एतेषाम् उच्चारणं मूर्ध-स्थाने भवति। (पाणिनीय-सूत्रम् – 'ऋटुरषा मूर्धन्याः')",
+        "aEn": "ऋ ॠ, ट ठ ड ढ ण, र, ष are pronounced at the roof of the mouth. (Sutra: 'ऋटुरषा मूर्धन्याः')"
+      },
+      {
+        "q": "दन्त्याः वर्णाः के?",
+        "qEn": "Which letters are dental (दन्त्य)?",
+        "a": "ऌ, त थ द ध न, ल, स – एतेषाम् उच्चारणं दन्त-स्थाने भवति। (पाणिनीय-सूत्रम् – 'ऌतुलसा दन्त्याः')",
+        "aEn": "ऌ, त थ द ध न, ल, स are pronounced at the teeth. (Sutra: 'ऌतुलसा दन्त्याः')"
+      },
+      {
+        "q": "ओष्ठ्याः वर्णाः के?",
+        "qEn": "Which letters are labial (ओष्ठ्य)?",
+        "a": "उ ऊ, प फ ब भ म – एतेषाम् उच्चारणम् ओष्ठ-स्थाने भवति। (पाणिनीय-सूत्रम् – 'उपूपध्मानीया ओष्ठ्याः')",
+        "aEn": "उ ऊ, प फ ब भ म are pronounced at the lips. (Sutra: 'उपूपध्मानीया ओष्ठ्याः')"
+      },
+      {
+        "q": "नासिक्याः वर्णाः के? स्वस्थानेन सह नासिका-स्थाने अपि उच्चारिताः वर्णाः के?",
+        "qEn": "Which letters are nasal? Which are pronounced at their own place plus the nose?",
+        "a": "अं (अनुस्वारः) – एकः शुद्धः नासिक्यः वर्णः।\nङ, ञ, ण, न, म – एतेषाम् उच्चारणं स्वस्थानेन सह नासिका-स्थाने अपि भवति (ङ=कण्ठ+नासिका, ञ=तालु+नासिका, ण=मूर्धा+नासिका, न=दन्त+नासिका, म=ओष्ठ+नासिका)।",
+        "aEn": "अं (anusvara) is the one purely nasal letter.\nङ, ञ, ण, न, म are pronounced at their own place as well as the nose — ङ=throat+nose, ञ=palate+nose, ण=cerebral+nose, न=teeth+nose, म=lips+nose."
+      },
+      {
+        "q": "द्विस्थानीय-वर्णाः के के? तेषां उच्चारण-स्थाने द्वयोः स्थानयोः नाम लिखन्तु।",
+        "qEn": "Which letters are pronounced at two places? Name both places for each.",
+        "a": "ए, ऐ – कण्ठ-तालव्यौ (कण्ठः + तालु)\nओ, औ – कण्ठोष्ठ्यौ (कण्ठः + ओष्ठः)\nव – दन्त्योष्ठ्यः (दन्तः + ओष्ठः)",
+        "aEn": "ए, ऐ — throat + palate\nओ, औ — throat + lips\nव — teeth + lips"
+      }
+    ]
+  },
+  {
+    "section": "परियोजनाकार्यम् (पक्षि-ध्वनयः)",
+    "questions": [
+      {
+        "q": "चाषः (नीलकण्ठः) कति-मात्रं ध्वनिं करोति? सः कीदृशः स्वरः इव भवति?",
+        "qEn": "How many मात्रा (time-units) does the चाष bird's (Indian Roller) call take? What type of vowel is it like?",
+        "a": "चाषः एक-मात्रं ध्वनिं करोति (ह्रस्व-स्वरः इव)। श्लोके – 'चाषस्तु वदते मात्रां...'",
+        "aEn": "The चाष bird makes a one-मात्रा sound, like a short (ह्रस्व) vowel."
+      },
+      {
+        "q": "वायसः (काकः) कति-मात्रं ध्वनिं करोति?",
+        "qEn": "How many मात्रा does the crow's call take?",
+        "a": "वायसः द्वि-मात्रं ध्वनिं करोति (दीर्घ-स्वरः इव)। श्लोके – '...द्विमात्रं त्वेव वायसः।'",
+        "aEn": "The crow makes a two-मात्रा sound, like a long (दीर्घ) vowel."
+      },
+      {
+        "q": "शिखी (मयूरः) कति-मात्रं ध्वनिं करोति?",
+        "qEn": "How many मात्रा does the peacock's call take?",
+        "a": "शिखी त्रि-मात्रं ध्वनिं करोति (प्लुत-स्वरः इव)। श्लोके – 'शिखी रौति त्रिमात्रं तु...'",
+        "aEn": "The peacock makes a three-मात्रा sound, like a prolated (प्लुत) vowel."
+      },
+      {
+        "q": "नकुलः कति-मात्रं ध्वनिं करोति?",
+        "qEn": "How many मात्रा does the mongoose's sound take?",
+        "a": "नकुलः अर्ध-मात्रं ध्वनिं करोति (व्यञ्जनम् इव)। श्लोके – '...नकुलस्त्वर्धमात्रकम्॥'",
+        "aEn": "The mongoose makes a half-मात्रा sound, like a consonant."
+      }
+    ]
+  },
+  {
+    "section": "शब्दार्थाः (Vocabulary)",
+    "questions": [
+      { "q": "पित्राज्ञा इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पित्राज्ञा?", "a": "पितुः आदेशः (हिन्दी: पिता का आदेश | English: Father's order)", "aEn": "Father's order" },
+      { "q": "लाकृतिः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of लाकृतिः?", "a": "'ऌ'-वर्णस्य आकृतिः (हिन्दी: 'ऌ'-वर्ण का रूप | English: Shape of letter 'ऌ')", "aEn": "Shape of the letter 'ऌ'" },
+      { "q": "एकैकः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of एकैकः?", "a": "प्रत्येकम् (हिन्दी: हर एक | English: Each one)", "aEn": "Each one" },
+      { "q": "अजः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of अजः?", "a": "छागः (हिन्दी: बकरा | English: Goat)", "aEn": "Goat" },
+      { "q": "वधूः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of वधूः?", "a": "परिणीता (हिन्दी: विवाहिता नारी | English: Married woman)", "aEn": "Married woman" },
+      { "q": "मातॄणम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातॄणम्?", "a": "मातुः ऋणम् (हिन्दी: माता का ऋण | English: Indebtedness to Mother)", "aEn": "Indebtedness to Mother" },
+      { "q": "कॢप्तम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of कॢप्तम्?", "a": "कल्पितम् (हिन्दी: माना हुआ | English: Supposed)", "aEn": "Supposed" },
+      { "q": "ऌकारः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of ऌकारः?", "a": "'ऌ'-वर्णः (हिन्दी: 'ऌ' वर्ण | English: Letter 'ऌ')", "aEn": "The letter 'ऌ'" },
+      { "q": "ओम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of ओम्?", "a": "प्रणवः (हिन्दी: एकाक्षर ब्रह्म | English: Name of Brahma)", "aEn": "Name of Brahma (the one-syllable sacred sound)" },
+      { "q": "औषधम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of औषधम्?", "a": "भेषजम् (हिन्दी: औषध | English: Medicine)", "aEn": "Medicine" },
+      { "q": "जिह्वा इत्यस्य अर्थः कः?", "qEn": "What is the meaning of जिह्वा?", "a": "रसना (हिन्दी: जीभ | English: Tongue)", "aEn": "Tongue" },
+      { "q": "नामधेयम् इत्यस्य अर्थः कः?", "qEn": "What is the meaning of नामधेयम्?", "a": "नाम (हिन्दी: नाम | English: Name)", "aEn": "Name" },
+      { "q": "भगिनी इत्यस्य अर्थः कः?", "qEn": "What is the meaning of भगिनी?", "a": "स्वसा (हिन्दी: बहन | English: Sister)", "aEn": "Sister" },
+      { "q": "भ्राता इत्यस्य अर्थः कः?", "qEn": "What is the meaning of भ्राता?", "a": "अनुजः/अग्रजः (हिन्दी: भाई | English: Brother)", "aEn": "Brother" },
+      { "q": "पितामही इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पितामही?", "a": "पितुः माता (हिन्दी: दादी | English: Paternal Grandmother)", "aEn": "Paternal Grandmother" },
+      { "q": "पितामहः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of पितामहः?", "a": "पितुः पिता (हिन्दी: दादा | English: Paternal Grandfather)", "aEn": "Paternal Grandfather" },
+      { "q": "मातामही इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातामही?", "a": "मातुः माता (हिन्दी: नानी | English: Maternal Grandmother)", "aEn": "Maternal Grandmother" },
+      { "q": "मातामहः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मातामहः?", "a": "मातुः पिता (हिन्दी: नाना | English: Maternal Grandfather)", "aEn": "Maternal Grandfather" },
+      { "q": "सुश्रीः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of सुश्रीः?", "a": "कुमारी (हिन्दी: कुमारी | English: Miss)", "aEn": "Miss" },
+      { "q": "श्रीः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of श्रीः?", "a": "लक्ष्मीः, सुन्दरता (हिन्दी: लक्ष्मी, सौन्दर्य | English: Goddess of prosperity)", "aEn": "Goddess of prosperity / beauty" },
+      { "q": "उपाधिः इत्यस्य अर्थः कः?", "qEn": "What is the meaning of उपाधिः?", "a": "विशिष्टता (हिन्दी: विशेषता | English: Title)", "aEn": "Title" },
+      { "q": "प्रथम-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of प्रथम-नाम?", "a": "मुख्यं नाम (हिन्दी: पहला नाम | English: First Name)", "aEn": "First Name" },
+      { "q": "मध्य-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of मध्य-नाम?", "a": "मध्यवर्ति-नाम (हिन्दी: बीच का नाम | English: Middle Name)", "aEn": "Middle Name" },
+      { "q": "अन्त्य-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of अन्त्य-नाम?", "a": "अन्तिम-नाम (हिन्दी: अन्तिम-नाम | English: Last Name)", "aEn": "Last Name" },
+      { "q": "कुल-नाम इत्यस्य अर्थः कः?", "qEn": "What is the meaning of कुल-नाम?", "a": "कुलस्य/गोत्रस्य/वंशस्य वा नाम (हिन्दी: कुल, गोत्र या वंश का नाम | English: Family Name)", "aEn": "Family Name" }
+    ]
+  }
+]

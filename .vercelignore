@@ -1,0 +1,12 @@
+Maths Ganita Prakash.pdf
+Match Book Solutions/
+Math Sample Papers/
+scripts/
+content/
+app.py
+requirements.txt
+templates/
+venv/
+venv_win/
+__pycache__/
+*.pyc
